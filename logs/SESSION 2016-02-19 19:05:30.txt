@@ -1,0 +1,1341 @@
+2016-02-19 19:05:30 New session started
+2016-02-19 19:05:31 User input: /*
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:  * main.c
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:  *
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:  *  Created on: Feb 11, 2016
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:  *      Author: mode
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:  */
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: /*!
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:  ============================================================================
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:  Name        : DownloadWeb.cpp
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:  Author      : Ernest Chochołowski 362761 ; Moritz Luszek 313556
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:  Version     : 0.08
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:  Copyright   : --
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:  Description : Sehr gut programm!
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:  ============================================================================
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:  */
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		/* According to POSIX.1-2001, POSIX.1-2008 */
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		#include <sys/select.h>
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		/* According to earlier standards */
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		#include <time.h>
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		#include <unistd.h>
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		#include <sys/types.h>
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		#include <stdio.h>
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		#include <string.h>
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		#include <stdlib.h>
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		#include <unistd.h>
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		#include <string.h>
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		#include <sys/socket.h>
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		#include <netdb.h>
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		#include<arpa/inet.h>
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		#include <sys/types.h>
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		#include <sys/stat.h>
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		#include <unistd.h>
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:        //defines
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		#define PORT 80			//The port on which to listen for incoming data
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		#define SOCKINQUEUE 5	//Max number of socks in queue
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		#define URLSIZE 256		//Max length of URL
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		#define HOSTSIZE 50		//For finding method of query
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		#define BUFLEN 63000 	//Max length of buffer -> experimentally 128K, seems legitimate, after some checking ; For google we gonna need ~twice as much 131072
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		#define STDIN 0
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		#define TIMESIZE 20
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		#define DEPTH 2
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:        typedef struct webaddr {
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:        	char hostname[HOSTSIZE];
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:        	char url[URLSIZE];
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:        	char IP[50];
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:        	char page[URLSIZE-HOSTSIZE];
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:        	char filename [URLSIZE-HOSTSIZE];
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:        } WebAddr;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:        typedef struct simple_list{
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:     	   struct simple_list* next;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:     	   char * string;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:        } list;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:        //functions declaration
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:        void die(char *s, int i);				//custom error function
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   int processSite(char *name, FILE *log, int depth,char * current_folder);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   int processQuery (char *query, FILE *log);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   char* getTimeBuffer(char *timebuff);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   int preprocess_website(WebAddr *website, FILE *log);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   int requestWebsite (WebAddr *website, FILE *log, char *buffer,unsigned int *buflen);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   int editAndSave (WebAddr *website, FILE *log, char *content, list *new_requests, int *times);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   int countURI (char *content, FILE *log);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:        int main()
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:        {
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   //master set
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   fd_set master_set;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   int ready;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   FD_ZERO(&master_set);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   FD_SET (STDIN, &master_set);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   //tmp_set
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   fd_set tmp_set;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   FD_ZERO(&tmp_set);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   //two more variables for work with stdin
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   char stdbuff[URLSIZE] = {0};	//We don't expect user to enter query longer than expected URL sizes
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   int lenbuf;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   //preparing pointers and variables for logging
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:     	   FILE *logfile;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   char *logname;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   char *logdir;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   char timebuff[TIMESIZE];
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   logname = (char*) malloc (sizeof(char)*32);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   //generate a filename
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   strcpy(logname,"SESSION ");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   strcat(logname,getTimeBuffer(timebuff));
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   strcat(logname,".txt");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   logdir = (char*) malloc (sizeof(logname)*strlen(logname)+sizeof(char)*7);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   strcpy(logdir, "./logs/");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   //if directory doesn't exist, create directory
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   struct stat st = {0};
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   if (stat(logdir, &st) == -1)
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   {
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		       mkdir(logdir, 0700);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   }
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   //concatenate path&filename
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   strcat(logdir,logname);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   logfile=fopen(logdir,"w");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   if(logfile==NULL)
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   {
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			   printf("Unable to create %s file.\n", logname);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			   die("error creating log file", 5);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   }
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   fprintf(logfile , "%s %s\n", getTimeBuffer(timebuff), "New session started");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   //choose initial folder to download the webiste in
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   char * websiteDir = (char*) malloc (sizeof(char)*URLSIZE);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   strcpy(websiteDir,"./");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   printf("Welcome in DownloadWeb application.\nType \"help.\" for help instructions\n\n");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   while(1)
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   {
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			   ready=0;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			   fflush (stdout);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			   tmp_set = master_set;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			   ready=select(FD_SETSIZE, &tmp_set, NULL, NULL, NULL);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			   if (ready == -1)
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			   {
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				   fprintf(logfile , "%s %s\n", getTimeBuffer(timebuff), "Error while selecting!");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				   die("select()",1);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			   }
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			   // any number of file descriptors is ready to be read
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			   if (FD_ISSET(STDIN, &tmp_set) && ready)// listen has read access-> accept new connection
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			   {
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				   /* Read data from stdin using fgets. */
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				   fgets(stdbuff, sizeof(stdbuff), stdin);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				   /*******************************************+
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				    * for testing purposes website fixed!!!!!!!
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				    *
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				    *
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				    *
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				    */
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				  // strcpy(stdbuff,"http://www.help.websiteos.com/websiteos/example_of_a_simple_html_page.htm");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				   /* Remove trailing newline character from the input buffer if needed. */
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				   lenbuf = strlen(stdbuff) - 1;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				   if (stdbuff[lenbuf] == '\n')
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					   stdbuff[lenbuf] = '\0';
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				   if (!strcmp(stdbuff, "q."))	//starting application shutdown procedure
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				   {
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					   printf("Terminating...\n");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					   fprintf(logfile , "%s %s %s\n", getTimeBuffer(timebuff), "User input:",stdbuff);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					   fprintf(logfile , "%s %s %s\n", getTimeBuffer(timebuff), "System response:","Close application.");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					   return EXIT_SUCCESS;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				   }
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				   else if (!strncmp (stdbuff,"http://",7))//processing URL query
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				   {
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					   printf("Starting processing given website, please wait...\n%s\n", stdbuff);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					   fprintf(logfile , "%s %s %s\n", getTimeBuffer(timebuff), "User input:",stdbuff);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					   fprintf(logfile , "%s %s %s\n", getTimeBuffer(timebuff), "System response:","WWW website");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					   if (processSite(stdbuff, logfile, DEPTH,websiteDir)==1)
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					   {
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 						   printf("Unable to properly process website\n");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					   }
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					   else
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					   {
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 						   printf("Website got downloaded and is avalaible for offline use.\n");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					   }
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				   }
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				   else if (!strncmp (stdbuff,"GOOGLE: ",8))//processing google query
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				   {
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					   printf("Started processing your google query, please wait...\n");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					   fprintf(logfile , "%s %s %s\n", getTimeBuffer(timebuff), "User input:",stdbuff);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					   fprintf(logfile , "%s %s %s\n", getTimeBuffer(timebuff), "System response:","GOOGLE QUERY");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					   if (processQuery(stdbuff, logfile)==1)
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					   {
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 						   printf("Unable to properly process website\n");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					   }
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					   else
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					   {
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 						   printf("Query got processed and is avalaible for offline use.\n");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					   }
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				   }
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				   else if (!strcmp(stdbuff, "help."))//Writes help manual in console
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				   {
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					   fprintf(logfile , "%s %s %s\n", getTimeBuffer(timebuff), "User input:",stdbuff);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					   fprintf(logfile , "%s %s %s\n", getTimeBuffer(timebuff), "System response:","Help request");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					   printf("To download website one needs to write it's name in format:\n");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					   printf("http://www.<<nameofwebsite>>.<<domain>>/<<perhaps_more_address>>\n");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					   printf("And press ENTER\n(Be careful! Wrong format may cause application to not work properly!\n\n");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					   printf("To download google query one needs to write it in format:\n");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					   printf("GOOGLE: <<ALL_YOUR_QUERY_HERE>>\n");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					   printf("And press ENTER\n(Be careful! Wrong format may cause application to not work properly!\n\n");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					   printf("To leave, write \"q.\" and press ENTER\n\n");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				   }
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				   else
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				   {
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					   fprintf(logfile , "%s %s %s\n", getTimeBuffer(timebuff), "User input:",stdbuff);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				   	   fprintf(logfile , "%s %s %s\n", getTimeBuffer(timebuff), "System response:","Meaningless input");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					   printf("meaningless input\n");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				   }
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			   }
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   }
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:        	return EXIT_SUCCESS;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:        }
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:        //functions bodies
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:        void die (char *s, int i)	//custom error function
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:        {
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:        	perror(s);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:        	exit(i);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:        }
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   char* getTimeBuffer(char *timebuff)
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   {
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   struct tm *sTm;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   time_t now = time (0);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   sTm = gmtime (&now);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   strftime (timebuff, TIMESIZE, "%Y-%m-%d %H:%M:%S", sTm);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   return timebuff;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   }
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   /***********************************
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	    * Funktioniert
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	    *
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	    * ************************************/
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   int preprocess_website (WebAddr *website, FILE *log)
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   {
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   	char timebuff[TIMESIZE];
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   	// check argument
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   	if ( !(website->hostname != NULL && website->url != NULL ))
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   	{
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   		fprintf(log, "%s %s\n", getTimeBuffer(timebuff), "invalid argument for partitionAddress()");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:    				return EXIT_FAILURE;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   	}
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			// check buffer overflow
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			if ( !(sizeof(website->hostname)) )
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			{
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				fprintf(log, "%s %s\n", getTimeBuffer(timebuff), "buffer overflow inside partitionAddress()");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				return EXIT_FAILURE;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			}
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   	/****************
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   	 * start processing
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   	 *
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   	 * search for the first / after the web address, this position tells us where the hostname ends and where the relative page address starts
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   	 */
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			int i = strcspn (website->url+7,"/");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			if ((i+7)>48)
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			{
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				fprintf(log, "%s %s\n", getTimeBuffer(timebuff), "Hostname too long");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				return EXIT_FAILURE;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			}
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			if ((i+7)>204)
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			{
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				fprintf(log, "%s %s\n", getTimeBuffer(timebuff), "page too long");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				return EXIT_FAILURE;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			}
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			fprintf(log, "%s %s\n", getTimeBuffer(timebuff), "copying hostname and webpage.... successful");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			char *pch = strrchr (website->url,'/');
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			strcpy(website->filename, pch+1);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			strncpy(website->hostname,website->url,i+7); //! strings not zero terminated!
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			int l = pch-(website->url+i+7);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			strncpy(website->page,website->url+i+7,l+1);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   	printf("\nname: %s, hostname:%s, page:%s\n", website->url, website->hostname, website->page);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   	/****************************+
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   	 * get the IP address for the website
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   	 *
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   	 */
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   	fprintf(log, "%s %s\n", getTimeBuffer(timebuff), "obtain IP address for website");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   	struct addrinfo hints, *servinfo, *p;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   	struct sockaddr_in *h;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   	int rv;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   	memset(&hints, 0, sizeof hints);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   	hints.ai_family = AF_INET; // use AF_INET6 to force IPv6 // AF_UNSPEC for agnostic result ; none were working for me
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   	hints.ai_socktype = SOCK_STREAM;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			//http:// has to be excluded for getaddrinfo to work
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   	if ( (rv = getaddrinfo( website->hostname+7 , "http" , &hints , &servinfo)) != 0)
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   	{
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			   fprintf(log, "%s getaddrinfo error: %s\n", getTimeBuffer(timebuff), gai_strerror(rv));
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			   fprintf(stderr, "getaddrinfo: %s\n", gai_strerror(rv));
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			   return 1;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   	}
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   	// loop through all the results and connect to the first we can
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   	for(p = servinfo; p != NULL; p = p->ai_next)
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   	{
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			   h = (struct sockaddr_in *) p->ai_addr;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			   strcpy(website->IP , inet_ntoa( h->sin_addr ) );
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   	}
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   	freeaddrinfo(servinfo); // all done with this structure
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   	fprintf(log, "%s %s\n", getTimeBuffer(timebuff), "success DNS query");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   	return EXIT_SUCCESS;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   }
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   /************************
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	    * google stuff
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	    *
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	    * **********************/
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   int processQuery(char *query, FILE *log)
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:        {
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:     	   //////////logging  system///////////
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:     	   FILE *logfile;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   char timebuff[TIMESIZE];
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   if (log == NULL)
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   {
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			   char *logname;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			   char *logdir;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			   logname = (char*) malloc (sizeof(char)*36);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:   			   logdir = (char*) malloc (sizeof(logname)*strlen(logname)+sizeof(char)*7);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:   			   strcpy (logname, "GOOGLEQUERY ");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:   			   strcat(logname,getTimeBuffer(timebuff));
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:   			   strcat(logname,".txt");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:   			   strcpy(logdir, "./logs/");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:   			   strcat(logdir,logname);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			   //if directory doesn't exist, create directory
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			   struct stat st = {0};
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			   if (stat(logdir, &st) == -1)
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			   {
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				   mkdir(logdir, 0700);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			   }
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:   			   logfile=fopen(logdir,"w");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:   			   if(logfile==NULL)
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:   			   {
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:   				   printf("Unable to create %s file.", logname);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:   				   die("error creating log file", 5);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:   			   }
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   }
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   else
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   {
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			   logfile = log;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   }
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:     	   //////////logging  system///////////
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   fprintf(logfile , "%s %s \"%s\"\n", getTimeBuffer(timebuff), "Started processing query", query);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   //////////processing query///////////
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   char *pch;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   char *tmp;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   query+=8;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   fprintf (logfile,"%s %s \"%s\" %s\n", getTimeBuffer(timebuff), "Splitting string", query, "into tokens.");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   tmp = (char*) malloc (sizeof(char)*(strlen(query)+30));
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   strcpy (tmp, "http://www.google.de/search?q=");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   pch = strtok (query, " ,.-\"");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   while (1)
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   {
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		       strcat(tmp,pch);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		       fprintf (logfile,"%s %s \"%s\" %s\n", getTimeBuffer(timebuff), "Got token", pch, "from string.");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		       pch = strtok (NULL, " ,.-\"");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		       if(pch != NULL)
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		    	   strcat(tmp,"+");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		       else
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		    	   break;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   }
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   fprintf (logfile,"%s %s \"%s\"\n", getTimeBuffer(timebuff), "Finished processing query into string:", tmp);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   processSite(tmp, logfile, DEPTH,"./");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   query-=8;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   //////////processing query///////////
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   fprintf(logfile , "%s %s \"%s\"\n", getTimeBuffer(timebuff), "Finished processing query", query);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   return EXIT_SUCCESS;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:        }
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   /***************************
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	    * download the content into buffer pointed address
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	    *
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	    */
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:        int requestWebsite (WebAddr *website, FILE *logfile, char *buffer, unsigned int *buflen)
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:        {
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:     	    char timebuff[TIMESIZE];
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			struct sockaddr_in si_server;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			socklen_t sock_length = sizeof(si_server);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			char data[BUFLEN];
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			int sock_id;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			int rcv_length=-1;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			*buflen = 0;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			fprintf(logfile, "%s %s\n", getTimeBuffer(timebuff), "Initialisation of requestWebsite() inside of processSite()");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			char *request;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			request = (char*) malloc (sizeof(website->hostname)*strlen(website->hostname)+sizeof(website->page)*strlen(website->page)+sizeof(char)*75);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			/////////////HTTP REQUEST////////////////
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			strcpy(request, "GET ");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			strcat(request, website->page);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			strcat(request, website->filename);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			strcat(request, " HTTP/1.1\r\nHost: ");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			strcat(request, website->hostname+7);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			strcat(request, "\r\nUser-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:44.0) Gecko/20100101 Firefox/44.0\r\n");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			strcat(request, "\r\n");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			fprintf(logfile, "%s\n%s\n%s\n", getTimeBuffer(timebuff), "SENT REQUEST:", request);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			// Set the criteria
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			memset((char*)&si_server, 0, sizeof(si_server)); // Set the structure to 0
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			si_server.sin_family = AF_INET;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			si_server.sin_port = htons(PORT);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			sock_id = socket(AF_INET, SOCK_STREAM, 0);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			if (sock_id == -1)
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				fprintf(logfile, "%s %s\n", getTimeBuffer(timebuff), "Socket() inside requestWebsite() :: FAILURE");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			else
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				fprintf(logfile, "%s %s\n", getTimeBuffer(timebuff), "Socket() inside requestWebsite() :: SUCCESS");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			if (inet_aton(website->IP, &si_server.sin_addr) == 0)
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				fprintf(logfile, "%s %s\n", getTimeBuffer(timebuff), "inet_aton() inside requestWebsite() :: FAILURE");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			else
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				fprintf(logfile, "%s %s\n", getTimeBuffer(timebuff), "inet_aton() inside requestWebsite() :: SUCCESS");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			fprintf(logfile, "%s %s\n", getTimeBuffer(timebuff), "Initialisation of connect() inside requestWebsite()");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			if (connect( sock_id, (const struct sockaddr *) &si_server, sock_length) == 0)
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				fprintf(logfile, "%s %s\n", getTimeBuffer(timebuff), "connect() inside requestWebsite() :: SUCCESS");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			else
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			{
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				fprintf(logfile, "%s %s\n", getTimeBuffer(timebuff), "connect() inside requestWebsite() :: FAILURE");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			return EXIT_FAILURE;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			}
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			if (send(sock_id, request, strlen(request), 0) < 0)
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			{
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				fprintf(logfile, "%s %s\n", getTimeBuffer(timebuff), "send() inside requestWebsite() :: FAILURE");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				return EXIT_FAILURE;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			}
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			else
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			{
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			  fprintf(logfile, "%s %s\n", getTimeBuffer(timebuff), "send() inside requestWebsite() :: SUCCESS");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			}
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			while(1)
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			{
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				rcv_length = recv(sock_id, data, sizeof(data), 0);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				///rcv_length = read(sock_id,data,sizeof(data));
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				if (rcv_length > 0)
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				{
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					fprintf(logfile, "%s %s\n", getTimeBuffer(timebuff), "recv() inside requestWebsite() :: SUCCESS");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					if (*buflen <= BUFLEN-1)
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					{
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 						fprintf(logfile, "%s %s\n", getTimeBuffer(timebuff), "var rcv_length inside requestWebsite() :: OK");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 						//fprintf(logfile, "%s %s\n%s\n\n%s\n\n", getTimeBuffer(timebuff), "Requested response ::", data, "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 						strcat(buffer, data);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 						*buflen += rcv_length;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					}
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					else
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					{
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 						fprintf(logfile, "%s %s\n", getTimeBuffer(timebuff), "var rcv_length inside requestWebsite() :: DATA TOO LONG");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 						fprintf(logfile, "%s %s %d\n", getTimeBuffer(timebuff), "var rcv_length inside requestWebsite() ::", rcv_length);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 						close(sock_id);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 						return EXIT_FAILURE;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					}
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				}
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				if(rcv_length==0)
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				{
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					fprintf(logfile, "%s %s %d\n", getTimeBuffer(timebuff), "recv() inside requestWebsite() :: SUCCESS, databytes read:",*buflen);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					break;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				}
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				if(rcv_length == -1)
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				{//http://www.help.websiteos.com/websiteos/example_of_a_simple_html_page.htm
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					fprintf(logfile, "%s %s\n", getTimeBuffer(timebuff), "recv() inside requestWebsite() :: FAILURE");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					close(sock_id);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					return EXIT_FAILURE;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				}
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			}
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			char* beginning_of_data =strstr(buffer,"\r\n\r\n");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			if(beginning_of_data !=NULL)
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			{
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				buffer = beginning_of_data+4; //the escape character sequence has to be excluded
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				*buflen -= (beginning_of_data-buffer);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			}
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			close(sock_id);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			return EXIT_SUCCESS;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   }
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:        //unfinished functions below
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:        int countURI (char *content, FILE *log) //should count URI in given char array "content"; returns number of URIs
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:        {
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:     	   char timebuff[TIMESIZE];
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:     	   char * pch;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:     	   int position = 0;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:     	   int uriCount = 0;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:     	   while (1)
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:     	   {
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			   pch = strstr (content+position+1,"src=\"");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			   position = (pch-content);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			   if(pch!=NULL)
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			   {
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				   uriCount++;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				   continue;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			   }
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			   break;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:     	   }
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:     	   return uriCount;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:        }
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:        int editAndSave (WebAddr *website, FILE *logfile, char *content, list *new_requests, int *times) //edits URLs in given char array *content and saves it into a file; moreover saves new URL requests in **new_requests array of char arrays
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:        {
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			char timebuff[TIMESIZE];
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			fprintf(logfile, "%s %s\n", getTimeBuffer(timebuff), "Initialisation of editAndSave() inside of processSite()");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			//new_requests = (list *) malloc(sizeof( list)); //max no of links ==50
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			new_requests->string = (char*) malloc(URLSIZE);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			list * initial_pointer = new_requests; // buffer beginning of list
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		    char * pch =content,*positionbuf;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		    int i;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			for(i=0;i<50;)
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			 {
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				 positionbuf = strstr(pch,"src=\"");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				 if(positionbuf==NULL)
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					 break; //no further occurrence found
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				 pch = strstr(positionbuf+5,"\"");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				 char *tmp = (char*) malloc (pch-(positionbuf+5)+1);//length of src=" is 5, -1 to exclude "
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				 memset(tmp,0,pch-(positionbuf+5)+1);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				 strncpy(tmp,positionbuf+5, pch-(positionbuf+5));
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				 if(strstr(tmp,"http://")) //check if we have an absolute link, if so the path in the !saved! file has to be changed!!!!!!!
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					 strcpy(new_requests->string, tmp);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				 else
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				 {//relative link => add website address but the path in the !saved! file can stay the same (Browser will look in the same folder for this files)
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					 strcpy(new_requests->string, website->hostname);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					 strcat(new_requests->string, website->page); // ist ein / nach der page address vorhanden? müsste!!
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					 strcat(new_requests->string, tmp);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				 }
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				 new_requests->next =(list *) malloc(sizeof( list));
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				 new_requests = new_requests->next;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				 new_requests->string = (char*) malloc(URLSIZE);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			 }
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			pch=content;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			for(;i<50;)
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			{
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				positionbuf = strstr(pch,"href=\"");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				if(positionbuf==NULL)
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					break; //no further occurrence found
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				pch = strstr(positionbuf+6,"\"");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				char *tmp = (char*) malloc (pch-(positionbuf+6)+1);//length of src=" is 5, -1 to exclude "
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				memset(tmp,0,pch-(positionbuf+5)+1);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				strncpy(tmp,positionbuf+6, pch-(positionbuf+6));
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				if(strstr(tmp,"http://")) //check if we have an absolute link, if so the path in the !saved! file has to be changed!!!!!!!
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					strcpy(new_requests->string, tmp);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				else
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				{//relative link => add website address but the path in the !saved! file can stay the same (Browser will look in the same folder for this files)
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					strcpy(new_requests->string, website->hostname);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					strcat(new_requests->string, website->page); // ist ein / nach der page address vorhanden? müsste!!
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 					strcat(new_requests->string, tmp);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				}
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				new_requests->next =(list *) malloc(sizeof( list));
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				new_requests = new_requests->next;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 				new_requests->string = (char*) malloc(URLSIZE);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			}
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			new_requests = initial_pointer;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			///TODO
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			//within the for loop the content has to be built up from scratch to make all the relative links to fit
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   fprintf(logfile , "%s %s\n", getTimeBuffer(timebuff), "All links of the website have been saved");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:     	   return EXIT_SUCCESS;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input:        }
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: int processSite(char *name, FILE *log, int depth, char * current_folder)
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: {
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   char timebuff[TIMESIZE];
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   if(depth < 1)
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   {
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   fprintf(log , "%s %s\n", getTimeBuffer(timebuff), "Maximum depth reached, website not processed");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   return EXIT_FAILURE;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   }
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   fprintf(log , "%s %s\t%s, %s %d\n", getTimeBuffer(timebuff), "Started processing website", name, "DEPTH ::", depth);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   //////////processing website address///////////
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   WebAddr website;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   memset(website.hostname,0,HOSTSIZE-1);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   memset(website.IP,0,49);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   memset(website.page,0,URLSIZE-HOSTSIZE-1);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   memset(website.filename,0,URLSIZE-HOSTSIZE-1);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   memset(website.url,0,URLSIZE-1);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   strcpy(website.url, name);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   preprocess_website(&website, log);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   fprintf(log , "%s %s %s %s\n", getTimeBuffer(timebuff), website.url, "hostname is", website.hostname);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   fprintf(log , "%s %s %s %s\n", getTimeBuffer(timebuff), website.hostname, "resolved to", website.IP);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   fprintf(log , "%s %s %s\n", getTimeBuffer(timebuff), "Demanded page is", website.page);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   //////////processing website address///////////
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   /*****************************
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		* download the website
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		*
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		*
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		*/
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   char content[BUFLEN];
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   unsigned int received_data_size;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   memset(content, 0, BUFLEN-1);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   if(requestWebsite (&website, log, content,&received_data_size)==0)
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   fprintf(log, "%s %s\n", getTimeBuffer(timebuff), "requestWebsite() inside processSite() :: SUCCESS");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   else
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   {
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   fprintf(log, "%s %s\n", getTimeBuffer(timebuff), "requestWebsite() inside processSite() :: FAILURE");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   return EXIT_FAILURE;	//commented only for now;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   }
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   /*******************************
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		* extract all the links from the website
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		* and change to relative addressing
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		*
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		*
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		*/
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   list *new_requests =malloc(sizeof(list));
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   int length;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   if(editAndSave (&website, log, content, new_requests, &length)==0)
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   fprintf(log, "%s %s\n", getTimeBuffer(timebuff), "editAndSave() inside processSite() :: SUCCESS");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   else
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   {
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   fprintf(log, "%s %s\n", getTimeBuffer(timebuff), "editAndSave() inside processSite() :: FAILURE");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   return EXIT_FAILURE;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   }
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   /************************************
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		* create folders for all the websites
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		* and write content (ie the downloaded file from website) to folder
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		*
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		*/
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   int websvr_header_length =0;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   char *websiteDir = current_folder;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   if (strstr(website.filename,".htm"))
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   {
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   websvr_header_length = strstr(content,"<!doctype HTML")-content;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   strcat(websiteDir, website.filename);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   strcat(websiteDir,"/");
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   struct stat st = {0};
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   if (stat(websiteDir, &st) == -1)
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   {
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 			   mkdir(websiteDir, 0700);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 		   }
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   }
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   FILE *file;
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   char * filename = (char*) malloc(strlen(website.filename)+strlen(websiteDir)+50);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   ///TODO//////
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   //check if there is status information in every file downloaded from the webserver
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   strcpy(filename,websiteDir);
+2016-02-19 19:05:31 System response: Meaningless input
+2016-02-19 19:05:31 User input: 	   strcat(filename, website.filename );
+2016-

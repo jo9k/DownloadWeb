@@ -1,0 +1,42 @@
+2016-02-19 16:52:27 New session started
+2016-02-19 16:52:28 User input: http://www.help.websiteos.com/websiteos/example_of_a_simple_html_page.htm
+2016-02-19 16:52:28 System response: WWW website
+2016-02-19 16:52:28 Started processing website	http://www.help.websiteos.com/websiteos/example_of_a_simple_html_page.htm, DEPTH :: 2
+2016-02-19 16:52:28 copying hostname and webpage.... successful
+2016-02-19 16:52:28 obtain IP address for website
+2016-02-19 16:52:28 success DNS query
+2016-02-19 16:52:28 http://www.help.websiteos.com/websiteos/example_of_a_simple_html_page.htm hostname is http://www.help.websiteos.com
+2016-02-19 16:52:28 http://www.help.websiteos.com resolved to 216.251.32.98
+2016-02-19 16:52:28 Demanded resource is /websiteos/example_of_a_simple_html_page.htm
+2016-02-19 16:52:28 Initialisation of requestWebsite() inside of processSite()
+2016-02-19 16:52:28
+SENT REQUEST:
+GET /websiteos/example_of_a_simple_html_page.htm HTTP/1.1
+Host: www.help.websiteos.com
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:44.0) Gecko/20100101 Firefox/44.0
+
+
+2016-02-19 16:52:28 Socket() inside requestWebsite() :: SUCCESS
+2016-02-19 16:52:28 inet_aton() inside requestWebsite() :: SUCCESS
+2016-02-19 16:52:28 Initialisation of connect() inside requestWebsite()
+2016-02-19 16:52:28 connect() inside requestWebsite() :: SUCCESS
+2016-02-19 16:52:28 send() inside requestWebsite() :: SUCCESS
+2016-02-19 16:52:28 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 16:52:28 var rcv_length inside requestWebsite() :: OK 0
+2016-02-19 16:52:28 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 16:52:28 var rcv_length inside requestWebsite() :: OK 1
+2016-02-19 16:52:28 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 16:52:28 var rcv_length inside requestWebsite() :: OK 2
+2016-02-19 16:52:28 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 16:52:28 var rcv_length inside requestWebsite() :: OK 3
+2016-02-19 16:52:28 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 16:52:28 var rcv_length inside requestWebsite() :: OK 4
+2016-02-19 16:52:38 recv() inside requestWebsite() :: SUCCESS, databytes read: 4958
+2016-02-19 16:52:38 requestWebsite() inside processSite() :: SUCCESS
+2016-02-19 16:52:38 Initialisation of editAndSave() inside of processSite()
+2016-02-19 16:52:38 All links of the website have been saved
+2016-02-19 16:52:38 editAndSave() inside processSite() :: SUCCESS
+2016-02-19 16:52:38 No more URIs left.
+2016-02-19 16:52:38 Finished processing website http://www.help.websiteos.com/websiteos/example_of_a_simple_html_page.htm
+2016-02-19 16:52:38 User input: q.
+2016-02-19 16:52:38 System response: Close application.

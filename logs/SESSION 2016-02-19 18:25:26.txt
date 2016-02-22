@@ -1,0 +1,300 @@
+2016-02-19 18:25:26 New session started
+2016-02-19 18:25:27 User input: http://www.yourhtmlsource.com/myfirstsite/myfirstpage.html
+2016-02-19 18:25:27 System response: WWW website
+2016-02-19 18:25:27 Started processing website	http://www.yourhtmlsource.com/myfirstsite/myfirstpage.html, DEPTH :: 2
+2016-02-19 18:25:27 copying hostname and webpage.... successful
+2016-02-19 18:25:27 obtain IP address for website
+2016-02-19 18:25:27 success DNS query
+2016-02-19 18:25:27 http://www.yourhtmlsource.com/myfirstsite/myfirstpage.html hostname is http://www.yourhtmlsource.com
+2016-02-19 18:25:27 http://www.yourhtmlsource.com resolved to 216.92.175.4
+2016-02-19 18:25:27 Demanded page is /myfirstsite/
+2016-02-19 18:25:27 Initialisation of requestWebsite() inside of processSite()
+2016-02-19 18:25:27
+SENT REQUEST:
+GET /myfirstsite/myfirstpage.html HTTP/1.1
+Host: www.yourhtmlsource.com
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:44.0) Gecko/20100101 Firefox/44.0
+
+
+2016-02-19 18:25:27 Socket() inside requestWebsite() :: SUCCESS
+2016-02-19 18:25:27 inet_aton() inside requestWebsite() :: SUCCESS
+2016-02-19 18:25:27 Initialisation of connect() inside requestWebsite()
+2016-02-19 18:25:27 connect() inside requestWebsite() :: SUCCESS
+2016-02-19 18:25:27 send() inside requestWebsite() :: SUCCESS
+2016-02-19 18:25:27 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 18:25:27 var rcv_length inside requestWebsite() :: OK
+2016-02-19 18:25:27 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 18:25:27 var rcv_length inside requestWebsite() :: OK
+2016-02-19 18:25:27 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 18:25:27 var rcv_length inside requestWebsite() :: OK
+2016-02-19 18:25:27 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 18:25:27 var rcv_length inside requestWebsite() :: OK
+2016-02-19 18:25:27 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 18:25:27 var rcv_length inside requestWebsite() :: OK
+2016-02-19 18:25:27 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 18:25:27 var rcv_length inside requestWebsite() :: OK
+2016-02-19 18:25:27 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 18:25:27 var rcv_length inside requestWebsite() :: OK
+2016-02-19 18:25:27 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 18:25:27 var rcv_length inside requestWebsite() :: OK
+2016-02-19 18:25:27 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 18:25:27 var rcv_length inside requestWebsite() :: OK
+2016-02-19 18:25:27 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 18:25:27 var rcv_length inside requestWebsite() :: OK
+2016-02-19 18:25:27 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 18:25:27 var rcv_length inside requestWebsite() :: OK
+2016-02-19 18:25:27 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 18:25:27 var rcv_length inside requestWebsite() :: OK
+2016-02-19 18:25:32 recv() inside requestWebsite() :: SUCCESS, databytes read: 22019
+2016-02-19 18:25:32 requestWebsite() inside processSite() :: SUCCESS
+2016-02-19 18:25:32 Initialisation of editAndSave() inside of processSite()
+2016-02-19 18:25:32 All links of the website have been saved
+2016-02-19 18:25:32 editAndSave() inside processSite() :: SUCCESS
+2016-02-19 18:25:32 Got URI "http://www.google.com/jsapi" from char array _new_requests
+2016-02-19 18:25:32 Started processing website	http://www.google.com/jsapi, DEPTH :: 1
+2016-02-19 18:25:32 copying hostname and webpage.... successful
+2016-02-19 18:25:32 obtain IP address for website
+2016-02-19 18:25:32 success DNS query
+2016-02-19 18:25:32 http://www.google.com/jsapi hostname is http://www.google.com
+2016-02-19 18:25:32 http://www.google.com resolved to 173.194.113.81
+2016-02-19 18:25:32 Demanded page is /
+2016-02-19 18:25:32 Initialisation of requestWebsite() inside of processSite()
+2016-02-19 18:25:32
+SENT REQUEST:
+GET /jsapi HTTP/1.1
+Host: www.google.com
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:44.0) Gecko/20100101 Firefox/44.0
+
+
+2016-02-19 18:25:32 Socket() inside requestWebsite() :: SUCCESS
+2016-02-19 18:25:32 inet_aton() inside requestWebsite() :: SUCCESS
+2016-02-19 18:25:32 Initialisation of connect() inside requestWebsite()
+2016-02-19 18:25:32 connect() inside requestWebsite() :: SUCCESS
+2016-02-19 18:25:32 send() inside requestWebsite() :: SUCCESS
+2016-02-19 18:25:32 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 18:25:32 var rcv_length inside requestWebsite() :: OK
+2016-02-19 18:25:32 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 18:25:32 var rcv_length inside requestWebsite() :: OK
+2016-02-19 18:25:32 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 18:25:32 var rcv_length inside requestWebsite() :: OK
+2016-02-19 18:25:32 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 18:25:32 var rcv_length inside requestWebsite() :: OK
+2016-02-19 18:25:32 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 18:25:32 var rcv_length inside requestWebsite() :: OK
+2016-02-19 18:25:32 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 18:25:32 var rcv_length inside requestWebsite() :: OK
+2016-02-19 18:25:32 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 18:25:32 var rcv_length inside requestWebsite() :: OK
+2016-02-19 18:29:32 recv() inside requestWebsite() :: SUCCESS, databytes read: 25630
+2016-02-19 18:29:32 requestWebsite() inside processSite() :: SUCCESS
+2016-02-19 18:29:32 Initialisation of editAndSave() inside of processSite()
+2016-02-19 18:29:32 All links of the website have been saved
+2016-02-19 18:29:32 editAndSave() inside processSite() :: SUCCESS
+2016-02-19 18:29:32 Got URI "http://www.google.com/'+b+'" from char array _new_requests
+2016-02-19 18:29:32 Maximum depth reached, website not processed
+2016-02-19 18:29:32 Couldn't proccess resource "http://www.google.com/'+b+'"
+2016-02-19 18:29:32 Got URI "http://www.google.com/'+b+'" from char array _new_requests
+2016-02-19 18:29:32 Maximum depth reached, website not processed
+2016-02-19 18:29:32 Couldn't proccess resource "http://www.google.com/'+b+'"
+2016-02-19 18:29:32 No more URIs left.
+2016-02-19 18:29:32 Finished processing website http://www.google.com/jsapi
+2016-02-19 18:29:32 Got URI "http://www.yourhtmlsource.com/myfirstsite//sourcescripts.js" from char array _new_requests
+2016-02-19 18:29:32 Started processing website	http://www.yourhtmlsource.com/myfirstsite//sourcescripts.js, DEPTH :: 1
+2016-02-19 18:29:32 copying hostname and webpage.... successful
+2016-02-19 18:29:32 obtain IP address for website
+2016-02-19 18:29:32 success DNS query
+2016-02-19 18:29:32 http://www.yourhtmlsource.com/myfirstsite//sourcescripts.js hostname is http://www.yourhtmlsource.com
+2016-02-19 18:29:32 http://www.yourhtmlsource.com resolved to 216.92.175.4
+2016-02-19 18:29:32 Demanded page is /myfirstsite//
+2016-02-19 18:29:32 Initialisation of requestWebsite() inside of processSite()
+2016-02-19 18:29:32
+SENT REQUEST:
+GET /myfirstsite//sourcescripts.js HTTP/1.1
+Host: www.yourhtmlsource.com
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:44.0) Gecko/20100101 Firefox/44.0
+
+
+2016-02-19 18:29:32 Socket() inside requestWebsite() :: SUCCESS
+2016-02-19 18:29:32 inet_aton() inside requestWebsite() :: SUCCESS
+2016-02-19 18:29:32 Initialisation of connect() inside requestWebsite()
+2016-02-19 18:29:32 connect() inside requestWebsite() :: SUCCESS
+2016-02-19 18:29:32 send() inside requestWebsite() :: SUCCESS
+2016-02-19 18:29:33 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 18:29:33 var rcv_length inside requestWebsite() :: OK
+2016-02-19 18:29:33 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 18:29:33 var rcv_length inside requestWebsite() :: OK
+2016-02-19 18:29:33 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 18:29:33 var rcv_length inside requestWebsite() :: OK
+2016-02-19 18:29:33 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 18:29:33 var rcv_length inside requestWebsite() :: OK
+2016-02-19 18:29:38 recv() inside requestWebsite() :: SUCCESS, databytes read: 3343
+2016-02-19 18:29:38 requestWebsite() inside processSite() :: SUCCESS
+2016-02-19 18:29:38 Initialisation of editAndSave() inside of processSite()
+2016-02-19 18:29:38 All links of the website have been saved
+2016-02-19 18:29:38 editAndSave() inside processSite() :: SUCCESS
+2016-02-19 18:29:38 Got URI "http://www.google.com/jsapi" from char array _new_requests
+2016-02-19 18:29:38 Maximum depth reached, website not processed
+2016-02-19 18:29:38 Couldn't proccess resource "http://www.google.com/jsapi"
+2016-02-19 18:29:38 Got URI "http://www.yourhtmlsource.com/myfirstsite///sourcescripts.js" from char array _new_requests
+2016-02-19 18:29:38 Maximum depth reached, website not processed
+2016-02-19 18:29:38 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite///sourcescripts.js"
+2016-02-19 18:29:38 Got URI "http://www.yourhtmlsource.com/myfirstsite///media/mail.gif" from char array _new_requests
+2016-02-19 18:29:38 Maximum depth reached, website not processed
+2016-02-19 18:29:38 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite///media/mail.gif"
+2016-02-19 18:29:38 Got URI "http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js" from char array _new_requests
+2016-02-19 18:29:38 Maximum depth reached, website not processed
+2016-02-19 18:29:38 Couldn't proccess resource "http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js"
+2016-02-19 18:29:38 Got URI "http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js" from char array _new_requests
+2016-02-19 18:29:38 Maximum depth reached, website not processed
+2016-02-19 18:29:38 Couldn't proccess resource "http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js"
+2016-02-19 18:29:38 No more URIs left.
+2016-02-19 18:29:38 Finished processing website http://www.yourhtmlsource.com/myfirstsite//sourcescripts.js
+2016-02-19 18:29:38 Got URI "http://www.yourhtmlsource.com/myfirstsite//media/search-callout.png" from char array _new_requests
+2016-02-19 18:29:38 Started processing website	http://www.yourhtmlsource.com/myfirstsite//media/search-callout.png, DEPTH :: 1
+2016-02-19 18:29:38 copying hostname and webpage.... successful
+2016-02-19 18:29:38 obtain IP address for website
+2016-02-19 18:29:38 success DNS query
+2016-02-19 18:29:38 http://www.yourhtmlsource.com/myfirstsite//media/search-callout.png hostname is http://www.yourhtmlsource.com
+2016-02-19 18:29:38 http://www.yourhtmlsource.com resolved to 216.92.175.4
+2016-02-19 18:29:38 Demanded page is /myfirstsite//media/
+2016-02-19 18:29:38 Initialisation of requestWebsite() inside of processSite()
+2016-02-19 18:29:38
+SENT REQUEST:
+GET /myfirstsite//media/search-callout.png HTTP/1.1
+Host: www.yourhtmlsource.com
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:44.0) Gecko/20100101 Firefox/44.0
+
+
+2016-02-19 18:29:38 Socket() inside requestWebsite() :: SUCCESS
+2016-02-19 18:29:38 inet_aton() inside requestWebsite() :: SUCCESS
+2016-02-19 18:29:38 Initialisation of connect() inside requestWebsite()
+2016-02-19 18:29:38 connect() inside requestWebsite() :: SUCCESS
+2016-02-19 18:29:38 send() inside requestWebsite() :: SUCCESS
+2016-02-19 18:29:38 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 18:29:38 var rcv_length inside requestWebsite() :: OK
+2016-02-19 18:29:38 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 18:29:38 var rcv_length inside requestWebsite() :: OK
+2016-02-19 18:29:38 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 18:29:38 var rcv_length inside requestWebsite() :: OK
+2016-02-19 18:29:38 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 18:29:38 var rcv_length inside requestWebsite() :: OK
+2016-02-19 18:29:43 recv() inside requestWebsite() :: SUCCESS, databytes read: 3343
+2016-02-19 18:29:43 requestWebsite() inside processSite() :: SUCCESS
+2016-02-19 18:29:43 Initialisation of editAndSave() inside of processSite()
+2016-02-19 18:29:43 All links of the website have been saved
+2016-02-19 18:29:43 editAndSave() inside processSite() :: SUCCESS
+2016-02-19 18:29:43 Got URI "http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js" from char array _new_requests
+2016-02-19 18:29:43 Maximum depth reached, website not processed
+2016-02-19 18:29:43 Couldn't proccess resource "http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js"
+2016-02-19 18:29:43 Got URI "http://www.google.com/jsapi" from char array _new_requests
+2016-02-19 18:29:43 Maximum depth reached, website not processed
+2016-02-19 18:29:43 Couldn't proccess resource "http://www.google.com/jsapi"
+2016-02-19 18:29:43 Got URI "http://www.yourhtmlsource.com/myfirstsite//media//sourcescripts.js" from char array _new_requests
+2016-02-19 18:29:43 Maximum depth reached, website not processed
+2016-02-19 18:29:43 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite//media//sourcescripts.js"
+2016-02-19 18:29:43 Got URI "http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js" from char array _new_requests
+2016-02-19 18:29:43 Maximum depth reached, website not processed
+2016-02-19 18:29:43 Couldn't proccess resource "http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js"
+2016-02-19 18:29:43 Got URI "http://www.yourhtmlsource.com/myfirstsite//media//media/mail.gif" from char array _new_requests
+2016-02-19 18:29:43 Maximum depth reached, website not processed
+2016-02-19 18:29:43 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite//media//media/mail.gif"
+2016-02-19 18:29:43 Got URI "http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js" from char array _new_requests
+2016-02-19 18:29:43 Maximum depth reached, website not processed
+2016-02-19 18:29:43 Couldn't proccess resource "http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js"
+2016-02-19 18:29:43 Got URI "http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js" from char array _new_requests
+2016-02-19 18:29:43 Maximum depth reached, website not processed
+2016-02-19 18:29:43 Couldn't proccess resource "http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js"
+2016-02-19 18:29:43 No more URIs left.
+2016-02-19 18:29:43 Finished processing website http://www.yourhtmlsource.com/myfirstsite//media/search-callout.png
+2016-02-19 18:29:43 Got URI "http://www.yourhtmlsource.com/myfirstsite//media/clock.png" from char array _new_requests
+2016-02-19 18:29:43 Started processing website	http://www.yourhtmlsource.com/myfirstsite//media/clock.png, DEPTH :: 1
+2016-02-19 18:29:43 copying hostname and webpage.... successful
+2016-02-19 18:29:43 obtain IP address for website
+2016-02-19 18:29:43 success DNS query
+2016-02-19 18:29:43 http://www.yourhtmlsource.com/myfirstsite//media/clock.png hostname is http://www.yourhtmlsource.com
+2016-02-19 18:29:43 http://www.yourhtmlsource.com resolved to 216.92.175.4
+2016-02-19 18:29:43 Demanded page is /myfirstsite//media/
+2016-02-19 18:29:43 Initialisation of requestWebsite() inside of processSite()
+2016-02-19 18:29:43
+SENT REQUEST:
+GET /myfirstsite//media/clock.png HTTP/1.1
+Host: www.yourhtmlsource.com
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:44.0) Gecko/20100101 Firefox/44.0
+
+
+2016-02-19 18:29:43 Socket() inside requestWebsite() :: SUCCESS
+2016-02-19 18:29:43 inet_aton() inside requestWebsite() :: SUCCESS
+2016-02-19 18:29:43 Initialisation of connect() inside requestWebsite()
+2016-02-19 18:29:43 connect() inside requestWebsite() :: SUCCESS
+2016-02-19 18:29:43 send() inside requestWebsite() :: SUCCESS
+2016-02-19 18:29:43 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 18:29:43 var rcv_length inside requestWebsite() :: OK
+2016-02-19 18:29:43 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 18:29:43 var rcv_length inside requestWebsite() :: OK
+2016-02-19 18:29:43 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 18:29:43 var rcv_length inside requestWebsite() :: OK
+2016-02-19 18:29:43 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 18:29:43 var rcv_length inside requestWebsite() :: OK
+2016-02-19 18:29:48 recv() inside requestWebsite() :: SUCCESS, databytes read: 3343
+2016-02-19 18:29:48 requestWebsite() inside processSite() :: SUCCESS
+2016-02-19 18:29:48 Initialisation of editAndSave() inside of processSite()
+2016-02-19 18:29:48 All links of the website have been saved
+2016-02-19 18:29:48 editAndSave() inside processSite() :: SUCCESS
+2016-02-19 18:29:48 Got URI "http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js" from char array _new_requests
+2016-02-19 18:29:48 Maximum depth reached, website not processed
+2016-02-19 18:29:48 Couldn't proccess resource "http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js"
+2016-02-19 18:29:48 Got URI "http://www.google.com/jsapi" from char array _new_requests
+2016-02-19 18:29:48 Maximum depth reached, website not processed
+2016-02-19 18:29:48 Couldn't proccess resource "http://www.google.com/jsapi"
+2016-02-19 18:29:48 Got URI "http://www.yourhtmlsource.com/myfirstsite//media//sourcescripts.js" from char array _new_requests
+2016-02-19 18:29:48 Maximum depth reached, website not processed
+2016-02-19 18:29:48 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite//media//sourcescripts.js"
+2016-02-19 18:29:48 Got URI "http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js" from char array _new_requests
+2016-02-19 18:29:48 Maximum depth reached, website not processed
+2016-02-19 18:29:48 Couldn't proccess resource "http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js"
+2016-02-19 18:29:48 Got URI "http://www.yourhtmlsource.com/myfirstsite//media//media/mail.gif" from char array _new_requests
+2016-02-19 18:29:48 Maximum depth reached, website not processed
+2016-02-19 18:29:48 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite//media//media/mail.gif"
+2016-02-19 18:29:48 Got URI "http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js" from char array _new_requests
+2016-02-19 18:29:48 Maximum depth reached, website not processed
+2016-02-19 18:29:48 Couldn't proccess resource "http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js"
+2016-02-19 18:29:48 Got URI "http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js" from char array _new_requests
+2016-02-19 18:29:48 Maximum depth reached, website not processed
+2016-02-19 18:29:48 Couldn't proccess resource "http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js"
+2016-02-19 18:29:48 No more URIs left.
+2016-02-19 18:29:48 Finished processing website http://www.yourhtmlsource.com/myfirstsite//media/clock.png
+2016-02-19 18:29:48 Got URI "http://www.yourhtmlsource.com/myfirstsite//searchhiplus.js" from char array _new_requests
+2016-02-19 18:29:48 Started processing website	http://www.yourhtmlsource.com/myfirstsite//searchhiplus.js, DEPTH :: 1
+2016-02-19 18:29:48 copying hostname and webpage.... successful
+2016-02-19 18:29:48 obtain IP address for website
+2016-02-19 18:29:48 success DNS query
+2016-02-19 18:29:48 http://www.yourhtmlsource.com/myfirstsite//searchhiplus.js hostname is http://www.yourhtmlsource.com
+2016-02-19 18:29:48 http://www.yourhtmlsource.com resolved to 216.92.175.4
+2016-02-19 18:29:48 Demanded page is /myfirstsite//
+2016-02-19 18:29:48 Initialisation of requestWebsite() inside of processSite()
+2016-02-19 18:29:48
+SENT REQUEST:
+GET /myfirstsite//searchhiplus.js HTTP/1.1
+Host: www.yourhtmlsource.com
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:44.0) Gecko/20100101 Firefox/44.0
+
+
+2016-02-19 18:29:48 Socket() inside requestWebsite() :: SUCCESS
+2016-02-19 18:29:48 inet_aton() inside requestWebsite() :: SUCCESS
+2016-02-19 18:29:48 Initialisation of connect() inside requestWebsite()
+2016-02-19 18:29:48 connect() inside requestWebsite() :: SUCCESS
+2016-02-19 18:29:48 send() inside requestWebsite() :: SUCCESS
+2016-02-19 18:29:48 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 18:29:48 var rcv_length inside requestWebsite() :: OK
+2016-02-19 18:29:48 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 18:29:48 var rcv_length inside requestWebsite() :: OK
+2016-02-19 18:29:48 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 18:29:48 var rcv_length inside requestWebsite() :: OK
+2016-02-19 18:29:48 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 18:29:48 var rcv_length inside requestWebsite() :: OK
+2016-02-19 18:29:53 recv() inside requestWebsite() :: SUCCESS, databytes read: 3343
+2016-02-19 18:29:53 requestWebsite() inside processSite() :: SUCCESS
+2016-02-19 18:29:53 Initialisation of editAndSave() inside of processSite()
+2016-02-19 18:29:53 All links of the website have been saved
+2016-02-19 18:29:53 editAndSave() inside processSite() :: SUCCESS
+2016-02-19 18:29:53 G
