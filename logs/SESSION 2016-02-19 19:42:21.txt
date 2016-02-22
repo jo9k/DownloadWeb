@@ -1,0 +1,348 @@
+2016-02-19 19:42:21 New session started
+2016-02-19 19:42:44 User input: http://www.help.websiteos.com/websiteos/example_of_a_simple_html_page.htm
+2016-02-19 19:42:44 System response: WWW website
+2016-02-19 19:42:44 Started processing website	http://www.help.websiteos.com/websiteos/example_of_a_simple_html_page.htm, DEPTH :: 2
+2016-02-19 19:42:44 copying hostname and webpage.... successful
+2016-02-19 19:42:44 obtain IP address for website
+2016-02-19 19:42:44 success DNS query
+2016-02-19 19:42:44 http://www.help.websiteos.com/websiteos/example_of_a_simple_html_page.htm hostname is http://www.help.websiteos.com
+2016-02-19 19:42:44 http://www.help.websiteos.com resolved to 216.251.32.98
+2016-02-19 19:42:44 Demanded page is /websiteos/
+2016-02-19 19:42:44 Initialisation of requestWebsite() inside of processSite()
+2016-02-19 19:42:44
+SENT REQUEST:
+GET /websiteos/example_of_a_simple_html_page.htm HTTP/1.1
+Host: www.help.websiteos.com
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:44.0) Gecko/20100101 Firefox/44.0
+
+
+2016-02-19 19:42:44 Socket() inside requestWebsite() :: SUCCESS
+2016-02-19 19:42:44 inet_aton() inside requestWebsite() :: SUCCESS
+2016-02-19 19:42:44 Initialisation of connect() inside requestWebsite()
+2016-02-19 19:42:44 connect() inside requestWebsite() :: SUCCESS
+2016-02-19 19:42:44 send() inside requestWebsite() :: SUCCESS
+2016-02-19 19:42:44 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:42:44 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:42:44 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:42:44 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:42:44 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:42:44 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:42:44 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:42:44 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:42:44 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:42:44 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:42:54 recv() inside requestWebsite() :: SUCCESS, databytes read: 4958
+2016-02-19 19:42:54 requestWebsite() inside processSite() :: SUCCESS
+2016-02-19 19:42:54 Initialisation of editAndSave() inside of processSite()
+2016-02-19 19:42:54 All links of the website have been saved
+2016-02-19 19:42:54 editAndSave() inside processSite() :: SUCCESS
+2016-02-19 19:42:54 Got URI "http://www.help.websiteos.com/websiteos/whmsg.js" from char array _new_requests
+2016-02-19 19:42:54 Started processing website	http://www.help.websiteos.com/websiteos/whmsg.js, DEPTH :: 1
+2016-02-19 19:42:54 copying hostname and webpage.... successful
+2016-02-19 19:42:54 obtain IP address for website
+2016-02-19 19:42:54 success DNS query
+2016-02-19 19:42:54 http://www.help.websiteos.com/websiteos/whmsg.js hostname is http://www.help.websiteos.com
+2016-02-19 19:42:54 http://www.help.websiteos.com resolved to 216.251.32.98
+2016-02-19 19:42:54 Demanded page is /websiteos/
+2016-02-19 19:42:54 Initialisation of requestWebsite() inside of processSite()
+2016-02-19 19:42:54
+SENT REQUEST:
+GET /websiteos/whmsg.js HTTP/1.1
+Host: www.help.websiteos.com
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:44.0) Gecko/20100101 Firefox/44.0
+
+
+2016-02-19 19:42:54 Socket() inside requestWebsite() :: SUCCESS
+2016-02-19 19:42:54 inet_aton() inside requestWebsite() :: SUCCESS
+2016-02-19 19:42:54 Initialisation of connect() inside requestWebsite()
+2016-02-19 19:42:54 connect() inside requestWebsite() :: SUCCESS
+2016-02-19 19:42:54 send() inside requestWebsite() :: SUCCESS
+2016-02-19 19:42:55 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:42:55 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:42:55 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:42:55 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:42:55 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:42:55 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:43:05 recv() inside requestWebsite() :: SUCCESS, databytes read: 2005
+2016-02-19 19:43:05 requestWebsite() inside processSite() :: SUCCESS
+2016-02-19 19:43:05 Initialisation of editAndSave() inside of processSite()
+2016-02-19 19:43:05 All links of the website have been saved
+2016-02-19 19:43:05 editAndSave() inside processSite() :: SUCCESS
+2016-02-19 19:43:05 No more URIs left.
+2016-02-19 19:43:05 Finished processing website http://www.help.websiteos.com/websiteos/whmsg.js
+2016-02-19 19:43:05 Got URI "http://www.help.websiteos.com/websiteos/whver.js" from char array _new_requests
+2016-02-19 19:43:05 Started processing website	http://www.help.websiteos.com/websiteos/whver.js, DEPTH :: 1
+2016-02-19 19:43:05 copying hostname and webpage.... successful
+2016-02-19 19:43:05 obtain IP address for website
+2016-02-19 19:43:05 success DNS query
+2016-02-19 19:43:05 http://www.help.websiteos.com/websiteos/whver.js hostname is http://www.help.websiteos.com
+2016-02-19 19:43:05 http://www.help.websiteos.com resolved to 216.251.32.98
+2016-02-19 19:43:05 Demanded page is /websiteos/
+2016-02-19 19:43:05 Initialisation of requestWebsite() inside of processSite()
+2016-02-19 19:43:05
+SENT REQUEST:
+GET /websiteos/whver.js HTTP/1.1
+Host: www.help.websiteos.com
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:44.0) Gecko/20100101 Firefox/44.0
+
+
+2016-02-19 19:43:05 Socket() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:05 inet_aton() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:05 Initialisation of connect() inside requestWebsite()
+2016-02-19 19:43:05 connect() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:05 send() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:05 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:05 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:43:05 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:05 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:43:05 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:05 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:43:15 recv() inside requestWebsite() :: SUCCESS, databytes read: 2471
+2016-02-19 19:43:15 requestWebsite() inside processSite() :: SUCCESS
+2016-02-19 19:43:15 Initialisation of editAndSave() inside of processSite()
+2016-02-19 19:43:15 All links of the website have been saved
+2016-02-19 19:43:15 editAndSave() inside processSite() :: SUCCESS
+2016-02-19 19:43:15 No more URIs left.
+2016-02-19 19:43:15 Finished processing website http://www.help.websiteos.com/websiteos/whver.js
+2016-02-19 19:43:15 Got URI "http://www.help.websiteos.com/websiteos/whproxy.js" from char array _new_requests
+2016-02-19 19:43:15 Started processing website	http://www.help.websiteos.com/websiteos/whproxy.js, DEPTH :: 1
+2016-02-19 19:43:15 copying hostname and webpage.... successful
+2016-02-19 19:43:15 obtain IP address for website
+2016-02-19 19:43:15 success DNS query
+2016-02-19 19:43:15 http://www.help.websiteos.com/websiteos/whproxy.js hostname is http://www.help.websiteos.com
+2016-02-19 19:43:15 http://www.help.websiteos.com resolved to 216.251.32.98
+2016-02-19 19:43:15 Demanded page is /websiteos/
+2016-02-19 19:43:15 Initialisation of requestWebsite() inside of processSite()
+2016-02-19 19:43:15
+SENT REQUEST:
+GET /websiteos/whproxy.js HTTP/1.1
+Host: www.help.websiteos.com
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:44.0) Gecko/20100101 Firefox/44.0
+
+
+2016-02-19 19:43:15 Socket() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:15 inet_aton() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:15 Initialisation of connect() inside requestWebsite()
+2016-02-19 19:43:15 connect() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:15 send() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:15 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:15 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:43:15 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:15 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:43:15 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:15 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:43:25 recv() inside requestWebsite() :: SUCCESS, databytes read: 1691
+2016-02-19 19:43:25 requestWebsite() inside processSite() :: SUCCESS
+2016-02-19 19:43:25 Initialisation of editAndSave() inside of processSite()
+2016-02-19 19:43:25 All links of the website have been saved
+2016-02-19 19:43:25 editAndSave() inside processSite() :: SUCCESS
+2016-02-19 19:43:25 No more URIs left.
+2016-02-19 19:43:25 Finished processing website http://www.help.websiteos.com/websiteos/whproxy.js
+2016-02-19 19:43:25 Got URI "http://www.help.websiteos.com/websiteos/whutils.js" from char array _new_requests
+2016-02-19 19:43:25 Started processing website	http://www.help.websiteos.com/websiteos/whutils.js, DEPTH :: 1
+2016-02-19 19:43:25 copying hostname and webpage.... successful
+2016-02-19 19:43:25 obtain IP address for website
+2016-02-19 19:43:25 success DNS query
+2016-02-19 19:43:25 http://www.help.websiteos.com/websiteos/whutils.js hostname is http://www.help.websiteos.com
+2016-02-19 19:43:25 http://www.help.websiteos.com resolved to 216.251.32.98
+2016-02-19 19:43:25 Demanded page is /websiteos/
+2016-02-19 19:43:25 Initialisation of requestWebsite() inside of processSite()
+2016-02-19 19:43:25
+SENT REQUEST:
+GET /websiteos/whutils.js HTTP/1.1
+Host: www.help.websiteos.com
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:44.0) Gecko/20100101 Firefox/44.0
+
+
+2016-02-19 19:43:25 Socket() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:25 inet_aton() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:25 Initialisation of connect() inside requestWebsite()
+2016-02-19 19:43:25 connect() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:25 send() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:25 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:25 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:43:25 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:25 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:43:25 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:25 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:43:26 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:26 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:43:26 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:26 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:43:26 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:26 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:43:26 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:26 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:43:26 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:26 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:43:26 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:26 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:43:35 recv() inside requestWebsite() :: SUCCESS, databytes read: 10696
+2016-02-19 19:43:35 requestWebsite() inside processSite() :: SUCCESS
+2016-02-19 19:43:35 Initialisation of editAndSave() inside of processSite()
+2016-02-19 19:43:35 All links of the website have been saved
+2016-02-19 19:43:35 editAndSave() inside processSite() :: SUCCESS
+2016-02-19 19:43:35 No more URIs left.
+2016-02-19 19:43:35 Finished processing website http://www.help.websiteos.com/websiteos/whutils.js
+2016-02-19 19:43:35 Got URI "http://www.help.websiteos.com/websiteos/whtopic.js" from char array _new_requests
+2016-02-19 19:43:35 Started processing website	http://www.help.websiteos.com/websiteos/whtopic.js, DEPTH :: 1
+2016-02-19 19:43:35 copying hostname and webpage.... successful
+2016-02-19 19:43:35 obtain IP address for website
+2016-02-19 19:43:35 success DNS query
+2016-02-19 19:43:35 http://www.help.websiteos.com/websiteos/whtopic.js hostname is http://www.help.websiteos.com
+2016-02-19 19:43:35 http://www.help.websiteos.com resolved to 216.251.32.98
+2016-02-19 19:43:35 Demanded page is /websiteos/
+2016-02-19 19:43:35 Initialisation of requestWebsite() inside of processSite()
+2016-02-19 19:43:35
+SENT REQUEST:
+GET /websiteos/whtopic.js HTTP/1.1
+Host: www.help.websiteos.com
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:44.0) Gecko/20100101 Firefox/44.0
+
+
+2016-02-19 19:43:35 Socket() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:35 inet_aton() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:35 Initialisation of connect() inside requestWebsite()
+2016-02-19 19:43:36 connect() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:36 send() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:36 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:36 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:43:36 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:36 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:43:36 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:36 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:43:36 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:36 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:43:36 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:36 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:43:36 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:36 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:43:36 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:36 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:43:36 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:36 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:43:36 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:36 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:43:36 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:36 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:43:36 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:36 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:43:46 recv() inside requestWebsite() :: SUCCESS, databytes read: 15212
+2016-02-19 19:43:46 requestWebsite() inside processSite() :: SUCCESS
+2016-02-19 19:43:46 Initialisation of editAndSave() inside of processSite()
+2016-02-19 19:43:46 All links of the website have been saved
+2016-02-19 19:43:46 editAndSave() inside processSite() :: SUCCESS
+2016-02-19 19:43:46 No more URIs left.
+2016-02-19 19:43:46 Finished processing website http://www.help.websiteos.com/websiteos/whtopic.js
+2016-02-19 19:43:46 Got URI "http://www.help.websiteos.com/websiteos/htmlpage.jpg" from char array _new_requests
+2016-02-19 19:43:46 Started processing website	http://www.help.websiteos.com/websiteos/htmlpage.jpg, DEPTH :: 1
+2016-02-19 19:43:46 copying hostname and webpage.... successful
+2016-02-19 19:43:46 obtain IP address for website
+2016-02-19 19:43:46 success DNS query
+2016-02-19 19:43:46 http://www.help.websiteos.com/websiteos/htmlpage.jpg hostname is http://www.help.websiteos.com
+2016-02-19 19:43:46 http://www.help.websiteos.com resolved to 216.251.32.98
+2016-02-19 19:43:46 Demanded page is /websiteos/
+2016-02-19 19:43:46 Initialisation of requestWebsite() inside of processSite()
+2016-02-19 19:43:46
+SENT REQUEST:
+GET /websiteos/htmlpage.jpg HTTP/1.1
+Host: www.help.websiteos.com
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:44.0) Gecko/20100101 Firefox/44.0
+
+
+2016-02-19 19:43:46 Socket() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:46 inet_aton() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:46 Initialisation of connect() inside requestWebsite()
+2016-02-19 19:43:46 connect() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:46 send() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:46 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:46 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:43:46 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:46 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:43:46 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:46 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:43:46 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:46 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:43:46 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:46 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:43:46 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:46 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:43:46 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:46 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:43:46 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:46 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:43:46 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:46 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:43:46 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:46 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:43:46 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:46 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:43:46 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:46 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:43:46 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:46 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:43:46 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:46 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:43:46 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:46 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:43:46 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:46 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:43:46 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:46 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:43:46 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:46 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:43:46 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:46 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:43:46 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:46 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:43:46 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:46 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:43:46 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:46 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:43:46 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:46 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:43:56 recv() inside requestWebsite() :: SUCCESS, databytes read: 35164
+2016-02-19 19:43:56 requestWebsite() inside processSite() :: SUCCESS
+2016-02-19 19:43:56 Initialisation of editAndSave() inside of processSite()
+2016-02-19 19:43:56 All links of the website have been saved
+2016-02-19 19:43:56 editAndSave() inside processSite() :: SUCCESS
+2016-02-19 19:43:56 No more URIs left.
+2016-02-19 19:43:56 Finished processing website http://www.help.websiteos.com/websiteos/htmlpage.jpg
+2016-02-19 19:43:56 Got URI "http://www.help.websiteos.com/websiteos/default_ns.css" from char array _new_requests
+2016-02-19 19:43:56 Started processing website	http://www.help.websiteos.com/websiteos/default_ns.css, DEPTH :: 1
+2016-02-19 19:43:56 copying hostname and webpage.... successful
+2016-02-19 19:43:56 obtain IP address for website
+2016-02-19 19:43:56 success DNS query
+2016-02-19 19:43:56 http://www.help.websiteos.com/websiteos/default_ns.css hostname is http://www.help.websiteos.com
+2016-02-19 19:43:56 http://www.help.websiteos.com resolved to 216.251.32.98
+2016-02-19 19:43:56 Demanded page is /websiteos/
+2016-02-19 19:43:56 Initialisation of requestWebsite() inside of processSite()
+2016-02-19 19:43:56
+SENT REQUEST:
+GET /websiteos/default_ns.css HTTP/1.1
+Host: www.help.websiteos.com
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:44.0) Gecko/20100101 Firefox/44.0
+
+
+2016-02-19 19:43:56 Socket() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:56 inet_aton() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:56 Initialisation of connect() inside requestWebsite()
+2016-02-19 19:43:56 connect() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:56 send() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:56 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:56 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:43:56 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:56 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:43:56 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:43:56 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:44:06 recv() inside requestWebsite() :: SUCCESS, databytes read: 2942
+2016-02-19 19:44:06 requestWebsite() inside processSite() :: SUCCESS
+2016-02-19 19:44:06 Initialisation of editAndSave() inside of processSite()
+2016-02-19 19:44:06 All links of the website have been saved
+2016-02-19 19:44:06 editAndSave() inside processSite() :: SUCCESS
+2016-02-19 19:44:06 No more URIs left.
+2016-02-19 19:44:06 Finished processing website http://www.help.websiteos.com/websiteos/default_ns.css
+2016-02-19 19:44:06 No more URIs left.
+2016-02-19 19:44:06 Finished processing website http://www.help.websiteos.com/websiteos/example_of_a_simple_html_page.htm
+2016-02-19 19:44:06 User input: q.
+2016-02-19 19:44:06 System response: Close application.

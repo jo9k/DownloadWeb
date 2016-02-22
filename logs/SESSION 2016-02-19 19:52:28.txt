@@ -1,0 +1,472 @@
+2016-02-19 19:52:28 New session started
+2016-02-19 19:52:31 User input: http://www.yourhtmlsource.com/myfirstsite/myfirstpage.html
+2016-02-19 19:52:31 System response: WWW website
+2016-02-19 19:52:31 Started processing website	http://www.yourhtmlsource.com/myfirstsite/myfirstpage.html, DEPTH :: 2
+2016-02-19 19:52:31 copying hostname and webpage.... successful
+2016-02-19 19:52:31 obtain IP address for website
+2016-02-19 19:52:41 success DNS query
+2016-02-19 19:52:41 http://www.yourhtmlsource.com/myfirstsite/myfirstpage.html hostname is http://www.yourhtmlsource.com
+2016-02-19 19:52:41 http://www.yourhtmlsource.com resolved to 216.92.175.4
+2016-02-19 19:52:41 Demanded page is /myfirstsite/
+2016-02-19 19:52:41 Initialisation of requestWebsite() inside of processSite()
+2016-02-19 19:52:41
+SENT REQUEST:
+GET /myfirstsite/myfirstpage.html HTTP/1.1
+Host: www.yourhtmlsource.com
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:44.0) Gecko/20100101 Firefox/44.0
+
+
+2016-02-19 19:52:41 Socket() inside requestWebsite() :: SUCCESS
+2016-02-19 19:52:41 inet_aton() inside requestWebsite() :: SUCCESS
+2016-02-19 19:52:41 Initialisation of connect() inside requestWebsite()
+2016-02-19 19:52:41 connect() inside requestWebsite() :: SUCCESS
+2016-02-19 19:52:41 send() inside requestWebsite() :: SUCCESS
+2016-02-19 19:52:41 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:52:41 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:52:41 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:52:41 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:52:41 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:52:41 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:52:41 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:52:41 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:52:41 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:52:41 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:52:42 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:52:42 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:52:42 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:52:42 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:52:42 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:52:42 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:52:42 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:52:42 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:52:42 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:52:42 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:52:42 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:52:42 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:52:42 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:52:42 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:52:46 recv() inside requestWebsite() :: SUCCESS, databytes read: 22019
+2016-02-19 19:52:46 requestWebsite() inside processSite() :: SUCCESS
+2016-02-19 19:52:46 Initialisation of editAndSave() inside of processSite()
+2016-02-19 19:52:46 All links of the website have been saved
+2016-02-19 19:52:46 editAndSave() inside processSite() :: SUCCESS
+2016-02-19 19:52:46 Got URI "http://www.google.com/jsapi" from char array _new_requests
+2016-02-19 19:52:46 Started processing website	http://www.google.com/jsapi, DEPTH :: 1
+2016-02-19 19:52:46 copying hostname and webpage.... successful
+2016-02-19 19:52:46 obtain IP address for website
+2016-02-19 19:52:46 success DNS query
+2016-02-19 19:52:46 http://www.google.com/jsapi hostname is http://www.google.com
+2016-02-19 19:52:46 http://www.google.com resolved to 173.194.113.84
+2016-02-19 19:52:46 Demanded page is /
+2016-02-19 19:52:46 Initialisation of requestWebsite() inside of processSite()
+2016-02-19 19:52:46
+SENT REQUEST:
+GET /jsapi HTTP/1.1
+Host: www.google.com
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:44.0) Gecko/20100101 Firefox/44.0
+
+
+2016-02-19 19:52:46 Socket() inside requestWebsite() :: SUCCESS
+2016-02-19 19:52:46 inet_aton() inside requestWebsite() :: SUCCESS
+2016-02-19 19:52:46 Initialisation of connect() inside requestWebsite()
+2016-02-19 19:52:46 connect() inside requestWebsite() :: SUCCESS
+2016-02-19 19:52:46 send() inside requestWebsite() :: SUCCESS
+2016-02-19 19:52:46 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:52:46 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:52:46 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:52:46 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:52:46 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:52:46 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:52:46 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:52:46 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:52:46 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:52:46 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:52:46 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:52:46 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:52:46 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:52:46 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:52:46 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:52:46 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:56:47 recv() inside requestWebsite() :: SUCCESS, databytes read: 25638
+2016-02-19 19:56:47 requestWebsite() inside processSite() :: SUCCESS
+2016-02-19 19:56:47 Initialisation of editAndSave() inside of processSite()
+2016-02-19 19:56:47 All links of the website have been saved
+2016-02-19 19:56:47 editAndSave() inside processSite() :: SUCCESS
+2016-02-19 19:56:47 Got URI "http://www.google.com/'+b+'" from char array _new_requests
+2016-02-19 19:56:47 Maximum depth reached, website not processed
+2016-02-19 19:56:47 Couldn't proccess resource "http://www.google.com/'+b+'"
+2016-02-19 19:56:47 Got URI "http://www.google.com/'+b+'" from char array _new_requests
+2016-02-19 19:56:47 Maximum depth reached, website not processed
+2016-02-19 19:56:47 Couldn't proccess resource "http://www.google.com/'+b+'"
+2016-02-19 19:56:47 Got URI "http://www.google.com/'+b+'" from char array _new_requests
+2016-02-19 19:56:47 Maximum depth reached, website not processed
+2016-02-19 19:56:47 Couldn't proccess resource "http://www.google.com/'+b+'"
+2016-02-19 19:56:47 Got URI "http://www.google.com/'+b+'" from char array _new_requests
+2016-02-19 19:56:47 Maximum depth reached, website not processed
+2016-02-19 19:56:47 Couldn't proccess resource "http://www.google.com/'+b+'"
+2016-02-19 19:56:47 No more URIs left.
+2016-02-19 19:56:47 Finished processing website http://www.google.com/jsapi
+2016-02-19 19:56:47 Got URI "http://www.yourhtmlsource.com/myfirstsite//sourcescripts.js" from char array _new_requests
+2016-02-19 19:56:47 Started processing website	http://www.yourhtmlsource.com/myfirstsite//sourcescripts.js, DEPTH :: 1
+2016-02-19 19:56:47 copying hostname and webpage.... successful
+2016-02-19 19:56:47 obtain IP address for website
+2016-02-19 19:56:47 success DNS query
+2016-02-19 19:56:47 http://www.yourhtmlsource.com/myfirstsite//sourcescripts.js hostname is http://www.yourhtmlsource.com
+2016-02-19 19:56:47 http://www.yourhtmlsource.com resolved to 216.92.175.4
+2016-02-19 19:56:47 Demanded page is /myfirstsite//
+2016-02-19 19:56:47 Initialisation of requestWebsite() inside of processSite()
+2016-02-19 19:56:47
+SENT REQUEST:
+GET /myfirstsite//sourcescripts.js HTTP/1.1
+Host: www.yourhtmlsource.com
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:44.0) Gecko/20100101 Firefox/44.0
+
+
+2016-02-19 19:56:47 Socket() inside requestWebsite() :: SUCCESS
+2016-02-19 19:56:47 inet_aton() inside requestWebsite() :: SUCCESS
+2016-02-19 19:56:47 Initialisation of connect() inside requestWebsite()
+2016-02-19 19:56:47 connect() inside requestWebsite() :: SUCCESS
+2016-02-19 19:56:47 send() inside requestWebsite() :: SUCCESS
+2016-02-19 19:56:47 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:56:47 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:56:47 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:56:47 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:56:47 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:56:47 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:56:47 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:56:47 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:56:52 recv() inside requestWebsite() :: SUCCESS, databytes read: 3343
+2016-02-19 19:56:52 requestWebsite() inside processSite() :: SUCCESS
+2016-02-19 19:56:52 Initialisation of editAndSave() inside of processSite()
+2016-02-19 19:56:52 All links of the website have been saved
+2016-02-19 19:56:52 editAndSave() inside processSite() :: SUCCESS
+2016-02-19 19:56:52 Got URI "http://www.google.com/jsapi" from char array _new_requests
+2016-02-19 19:56:52 Maximum depth reached, website not processed
+2016-02-19 19:56:52 Couldn't proccess resource "http://www.google.com/jsapi"
+2016-02-19 19:56:52 Got URI "http://www.yourhtmlsource.com/myfirstsite///sourcescripts.js" from char array _new_requests
+2016-02-19 19:56:52 Maximum depth reached, website not processed
+2016-02-19 19:56:52 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite///sourcescripts.js"
+2016-02-19 19:56:52 Got URI "http://www.yourhtmlsource.com/myfirstsite///media/mail.gif" from char array _new_requests
+2016-02-19 19:56:52 Maximum depth reached, website not processed
+2016-02-19 19:56:52 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite///media/mail.gif"
+2016-02-19 19:56:52 Got URI "http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js" from char array _new_requests
+2016-02-19 19:56:52 Maximum depth reached, website not processed
+2016-02-19 19:56:52 Couldn't proccess resource "http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js"
+2016-02-19 19:56:52 Got URI "http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js" from char array _new_requests
+2016-02-19 19:56:52 Maximum depth reached, website not processed
+2016-02-19 19:56:52 Couldn't proccess resource "http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js"
+2016-02-19 19:56:52 Got URI "http://www.yourhtmlsource.com/myfirstsite///print.css" from char array _new_requests
+2016-02-19 19:56:52 Maximum depth reached, website not processed
+2016-02-19 19:56:52 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite///print.css"
+2016-02-19 19:56:52 Got URI "http://www.yourhtmlsource.com/myfirstsite///favicon.ico" from char array _new_requests
+2016-02-19 19:56:52 Maximum depth reached, website not processed
+2016-02-19 19:56:52 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite///favicon.ico"
+2016-02-19 19:56:52 Got URI "http://www.yourhtmlsource.com/myfirstsite///htmlsource-search.xml" from char array _new_requests
+2016-02-19 19:56:52 Maximum depth reached, website not processed
+2016-02-19 19:56:52 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite///htmlsource-search.xml"
+2016-02-19 19:56:52 Got URI "http://www.yourhtmlsource.com/" from char array _new_requests
+2016-02-19 19:56:52 Maximum depth reached, website not processed
+2016-02-19 19:56:52 Couldn't proccess resource "http://www.yourhtmlsource.com/"
+2016-02-19 19:56:52 Got URI "http://www.yourhtmlsource.com/myfirstsite///contact/" from char array _new_requests
+2016-02-19 19:56:52 Maximum depth reached, website not processed
+2016-02-19 19:56:52 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite///contact/"
+2016-02-19 19:56:52 Got URI "http://www.yourhtmlsource.com/myfirstsite///" from char array _new_requests
+2016-02-19 19:56:52 Maximum depth reached, website not processed
+2016-02-19 19:56:52 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite///"
+2016-02-19 19:56:52 Got URI "http://www.yourhtmlsource.com/myfirstsite///fullindex/" from char array _new_requests
+2016-02-19 19:56:52 Maximum depth reached, website not processed
+2016-02-19 19:56:52 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite///fullindex/"
+2016-02-19 19:56:52 Got URI "http://www.yourhtmlsource.com/myfirstsite///sitemanagement/custom404error.html" from char array _new_requests
+2016-02-19 19:56:52 Maximum depth reached, website not processed
+2016-02-19 19:56:52 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite///sitemanagement/custom404error.html"
+2016-02-19 19:56:52 Got URI "http://www.yourhtmlsource.com/myfirstsite///" from char array _new_requests
+2016-02-19 19:56:52 Maximum depth reached, website not processed
+2016-02-19 19:56:52 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite///"
+2016-02-19 19:56:52 Got URI "http://www.yourhtmlsource.com/myfirstsite///fullindex/" from char array _new_requests
+2016-02-19 19:56:52 Maximum depth reached, website not processed
+2016-02-19 19:56:52 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite///fullindex/"
+2016-02-19 19:56:52 No more URIs left.
+2016-02-19 19:56:52 Finished processing website http://www.yourhtmlsource.com/myfirstsite//sourcescripts.js
+2016-02-19 19:56:52 Got URI "http://www.yourhtmlsource.com/myfirstsite//media/search-callout.png" from char array _new_requests
+2016-02-19 19:56:52 Started processing website	http://www.yourhtmlsource.com/myfirstsite//media/search-callout.png, DEPTH :: 1
+2016-02-19 19:56:52 copying hostname and webpage.... successful
+2016-02-19 19:56:52 obtain IP address for website
+2016-02-19 19:56:52 success DNS query
+2016-02-19 19:56:52 http://www.yourhtmlsource.com/myfirstsite//media/search-callout.png hostname is http://www.yourhtmlsource.com
+2016-02-19 19:56:52 http://www.yourhtmlsource.com resolved to 216.92.175.4
+2016-02-19 19:56:52 Demanded page is /myfirstsite//media/
+2016-02-19 19:56:52 Initialisation of requestWebsite() inside of processSite()
+2016-02-19 19:56:52
+SENT REQUEST:
+GET /myfirstsite//media/search-callout.png HTTP/1.1
+Host: www.yourhtmlsource.com
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:44.0) Gecko/20100101 Firefox/44.0
+
+
+2016-02-19 19:56:52 Socket() inside requestWebsite() :: SUCCESS
+2016-02-19 19:56:52 inet_aton() inside requestWebsite() :: SUCCESS
+2016-02-19 19:56:52 Initialisation of connect() inside requestWebsite()
+2016-02-19 19:56:52 connect() inside requestWebsite() :: SUCCESS
+2016-02-19 19:56:52 send() inside requestWebsite() :: SUCCESS
+2016-02-19 19:56:52 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:56:52 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:56:52 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:56:52 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:56:52 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:56:52 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:56:52 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:56:52 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:56:57 recv() inside requestWebsite() :: SUCCESS, databytes read: 3343
+2016-02-19 19:56:57 requestWebsite() inside processSite() :: SUCCESS
+2016-02-19 19:56:57 Initialisation of editAndSave() inside of processSite()
+2016-02-19 19:56:57 All links of the website have been saved
+2016-02-19 19:56:57 editAndSave() inside processSite() :: SUCCESS
+2016-02-19 19:56:57 Got URI "http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js" from char array _new_requests
+2016-02-19 19:56:57 Maximum depth reached, website not processed
+2016-02-19 19:56:57 Couldn't proccess resource "http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js"
+2016-02-19 19:56:57 Got URI "http://www.google.com/jsapi" from char array _new_requests
+2016-02-19 19:56:57 Maximum depth reached, website not processed
+2016-02-19 19:56:57 Couldn't proccess resource "http://www.google.com/jsapi"
+2016-02-19 19:56:57 Got URI "http://www.yourhtmlsource.com/myfirstsite//media//sourcescripts.js" from char array _new_requests
+2016-02-19 19:56:57 Maximum depth reached, website not processed
+2016-02-19 19:56:57 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite//media//sourcescripts.js"
+2016-02-19 19:56:57 Got URI "http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js" from char array _new_requests
+2016-02-19 19:56:57 Maximum depth reached, website not processed
+2016-02-19 19:56:57 Couldn't proccess resource "http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js"
+2016-02-19 19:56:57 Got URI "http://www.yourhtmlsource.com/myfirstsite//media//media/mail.gif" from char array _new_requests
+2016-02-19 19:56:57 Maximum depth reached, website not processed
+2016-02-19 19:56:57 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite//media//media/mail.gif"
+2016-02-19 19:56:57 Got URI "http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js" from char array _new_requests
+2016-02-19 19:56:57 Maximum depth reached, website not processed
+2016-02-19 19:56:57 Couldn't proccess resource "http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js"
+2016-02-19 19:56:57 Got URI "http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js" from char array _new_requests
+2016-02-19 19:56:57 Maximum depth reached, website not processed
+2016-02-19 19:56:57 Couldn't proccess resource "http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js"
+2016-02-19 19:56:57 Got URI "http://www.yourhtmlsource.com/myfirstsite//media//sitemanagement/custom404error.html" from char array _new_requests
+2016-02-19 19:56:57 Maximum depth reached, website not processed
+2016-02-19 19:56:57 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite//media//sitemanagement/custom404error.html"
+2016-02-19 19:56:57 Got URI "http://www.yourhtmlsource.com/myfirstsite//media//" from char array _new_requests
+2016-02-19 19:56:57 Maximum depth reached, website not processed
+2016-02-19 19:56:57 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite//media//"
+2016-02-19 19:56:57 Got URI "http://www.yourhtmlsource.com/myfirstsite//media//fullindex/" from char array _new_requests
+2016-02-19 19:56:57 Maximum depth reached, website not processed
+2016-02-19 19:56:57 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite//media//fullindex/"
+2016-02-19 19:56:57 Got URI "http://www.yourhtmlsource.com/myfirstsite//media//print.css" from char array _new_requests
+2016-02-19 19:56:57 Maximum depth reached, website not processed
+2016-02-19 19:56:57 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite//media//print.css"
+2016-02-19 19:56:57 Got URI "http://www.yourhtmlsource.com/myfirstsite//media//favicon.ico" from char array _new_requests
+2016-02-19 19:56:57 Maximum depth reached, website not processed
+2016-02-19 19:56:57 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite//media//favicon.ico"
+2016-02-19 19:56:57 Got URI "http://www.yourhtmlsource.com/myfirstsite//media//htmlsource-search.xml" from char array _new_requests
+2016-02-19 19:56:57 Maximum depth reached, website not processed
+2016-02-19 19:56:57 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite//media//htmlsource-search.xml"
+2016-02-19 19:56:57 Got URI "http://www.yourhtmlsource.com/" from char array _new_requests
+2016-02-19 19:56:57 Maximum depth reached, website not processed
+2016-02-19 19:56:57 Couldn't proccess resource "http://www.yourhtmlsource.com/"
+2016-02-19 19:56:57 Got URI "http://www.yourhtmlsource.com/myfirstsite//media//contact/" from char array _new_requests
+2016-02-19 19:56:57 Maximum depth reached, website not processed
+2016-02-19 19:56:57 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite//media//contact/"
+2016-02-19 19:56:57 Got URI "http://www.yourhtmlsource.com/myfirstsite//media//" from char array _new_requests
+2016-02-19 19:56:57 Maximum depth reached, website not processed
+2016-02-19 19:56:57 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite//media//"
+2016-02-19 19:56:57 Got URI "http://www.yourhtmlsource.com/myfirstsite//media//fullindex/" from char array _new_requests
+2016-02-19 19:56:57 Maximum depth reached, website not processed
+2016-02-19 19:56:57 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite//media//fullindex/"
+2016-02-19 19:56:57 Got URI "http://www.yourhtmlsource.com/myfirstsite//media//sitemanagement/custom404error.html" from char array _new_requests
+2016-02-19 19:56:57 Maximum depth reached, website not processed
+2016-02-19 19:56:57 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite//media//sitemanagement/custom404error.html"
+2016-02-19 19:56:57 Got URI "http://www.yourhtmlsource.com/myfirstsite//media//" from char array _new_requests
+2016-02-19 19:56:57 Maximum depth reached, website not processed
+2016-02-19 19:56:57 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite//media//"
+2016-02-19 19:56:57 Got URI "http://www.yourhtmlsource.com/myfirstsite//media//fullindex/" from char array _new_requests
+2016-02-19 19:56:57 Maximum depth reached, website not processed
+2016-02-19 19:56:57 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite//media//fullindex/"
+2016-02-19 19:56:57 No more URIs left.
+2016-02-19 19:56:57 Finished processing website http://www.yourhtmlsource.com/myfirstsite//media/search-callout.png
+2016-02-19 19:56:57 Got URI "http://www.yourhtmlsource.com/myfirstsite//media/clock.png" from char array _new_requests
+2016-02-19 19:56:57 Started processing website	http://www.yourhtmlsource.com/myfirstsite//media/clock.png, DEPTH :: 1
+2016-02-19 19:56:57 copying hostname and webpage.... successful
+2016-02-19 19:56:57 obtain IP address for website
+2016-02-19 19:56:57 success DNS query
+2016-02-19 19:56:57 http://www.yourhtmlsource.com/myfirstsite//media/clock.png hostname is http://www.yourhtmlsource.com
+2016-02-19 19:56:57 http://www.yourhtmlsource.com resolved to 216.92.175.4
+2016-02-19 19:56:57 Demanded page is /myfirstsite//media/
+2016-02-19 19:56:57 Initialisation of requestWebsite() inside of processSite()
+2016-02-19 19:56:57
+SENT REQUEST:
+GET /myfirstsite//media/clock.png HTTP/1.1
+Host: www.yourhtmlsource.com
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:44.0) Gecko/20100101 Firefox/44.0
+
+
+2016-02-19 19:56:57 Socket() inside requestWebsite() :: SUCCESS
+2016-02-19 19:56:57 inet_aton() inside requestWebsite() :: SUCCESS
+2016-02-19 19:56:57 Initialisation of connect() inside requestWebsite()
+2016-02-19 19:56:57 connect() inside requestWebsite() :: SUCCESS
+2016-02-19 19:56:57 send() inside requestWebsite() :: SUCCESS
+2016-02-19 19:56:57 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:56:57 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:56:57 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:56:57 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:56:57 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:56:57 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:56:58 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:56:58 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:57:02 recv() inside requestWebsite() :: SUCCESS, databytes read: 3343
+2016-02-19 19:57:02 requestWebsite() inside processSite() :: SUCCESS
+2016-02-19 19:57:02 Initialisation of editAndSave() inside of processSite()
+2016-02-19 19:57:02 All links of the website have been saved
+2016-02-19 19:57:02 editAndSave() inside processSite() :: SUCCESS
+2016-02-19 19:57:02 Got URI "http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js" from char array _new_requests
+2016-02-19 19:57:02 Maximum depth reached, website not processed
+2016-02-19 19:57:02 Couldn't proccess resource "http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js"
+2016-02-19 19:57:02 Got URI "http://www.google.com/jsapi" from char array _new_requests
+2016-02-19 19:57:02 Maximum depth reached, website not processed
+2016-02-19 19:57:02 Couldn't proccess resource "http://www.google.com/jsapi"
+2016-02-19 19:57:02 Got URI "http://www.yourhtmlsource.com/myfirstsite//media//sourcescripts.js" from char array _new_requests
+2016-02-19 19:57:02 Maximum depth reached, website not processed
+2016-02-19 19:57:02 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite//media//sourcescripts.js"
+2016-02-19 19:57:02 Got URI "http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js" from char array _new_requests
+2016-02-19 19:57:02 Maximum depth reached, website not processed
+2016-02-19 19:57:02 Couldn't proccess resource "http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js"
+2016-02-19 19:57:02 Got URI "http://www.yourhtmlsource.com/myfirstsite//media//media/mail.gif" from char array _new_requests
+2016-02-19 19:57:02 Maximum depth reached, website not processed
+2016-02-19 19:57:02 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite//media//media/mail.gif"
+2016-02-19 19:57:02 Got URI "http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js" from char array _new_requests
+2016-02-19 19:57:02 Maximum depth reached, website not processed
+2016-02-19 19:57:02 Couldn't proccess resource "http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js"
+2016-02-19 19:57:02 Got URI "http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js" from char array _new_requests
+2016-02-19 19:57:02 Maximum depth reached, website not processed
+2016-02-19 19:57:02 Couldn't proccess resource "http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js"
+2016-02-19 19:57:02 Got URI "http://www.yourhtmlsource.com/myfirstsite//media//sitemanagement/custom404error.html" from char array _new_requests
+2016-02-19 19:57:02 Maximum depth reached, website not processed
+2016-02-19 19:57:02 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite//media//sitemanagement/custom404error.html"
+2016-02-19 19:57:02 Got URI "http://www.yourhtmlsource.com/myfirstsite//media//" from char array _new_requests
+2016-02-19 19:57:02 Maximum depth reached, website not processed
+2016-02-19 19:57:02 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite//media//"
+2016-02-19 19:57:02 Got URI "http://www.yourhtmlsource.com/myfirstsite//media//fullindex/" from char array _new_requests
+2016-02-19 19:57:02 Maximum depth reached, website not processed
+2016-02-19 19:57:02 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite//media//fullindex/"
+2016-02-19 19:57:02 Got URI "http://www.yourhtmlsource.com/myfirstsite//media//print.css" from char array _new_requests
+2016-02-19 19:57:02 Maximum depth reached, website not processed
+2016-02-19 19:57:02 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite//media//print.css"
+2016-02-19 19:57:02 Got URI "http://www.yourhtmlsource.com/myfirstsite//media//favicon.ico" from char array _new_requests
+2016-02-19 19:57:02 Maximum depth reached, website not processed
+2016-02-19 19:57:02 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite//media//favicon.ico"
+2016-02-19 19:57:02 Got URI "http://www.yourhtmlsource.com/myfirstsite//media//htmlsource-search.xml" from char array _new_requests
+2016-02-19 19:57:02 Maximum depth reached, website not processed
+2016-02-19 19:57:02 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite//media//htmlsource-search.xml"
+2016-02-19 19:57:02 Got URI "http://www.yourhtmlsource.com/" from char array _new_requests
+2016-02-19 19:57:02 Maximum depth reached, website not processed
+2016-02-19 19:57:02 Couldn't proccess resource "http://www.yourhtmlsource.com/"
+2016-02-19 19:57:02 Got URI "http://www.yourhtmlsource.com/myfirstsite//media//contact/" from char array _new_requests
+2016-02-19 19:57:02 Maximum depth reached, website not processed
+2016-02-19 19:57:02 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite//media//contact/"
+2016-02-19 19:57:02 Got URI "http://www.yourhtmlsource.com/myfirstsite//media//" from char array _new_requests
+2016-02-19 19:57:02 Maximum depth reached, website not processed
+2016-02-19 19:57:02 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite//media//"
+2016-02-19 19:57:02 Got URI "http://www.yourhtmlsource.com/myfirstsite//media//fullindex/" from char array _new_requests
+2016-02-19 19:57:02 Maximum depth reached, website not processed
+2016-02-19 19:57:02 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite//media//fullindex/"
+2016-02-19 19:57:02 Got URI "http://www.yourhtmlsource.com/myfirstsite//media//sitemanagement/custom404error.html" from char array _new_requests
+2016-02-19 19:57:02 Maximum depth reached, website not processed
+2016-02-19 19:57:02 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite//media//sitemanagement/custom404error.html"
+2016-02-19 19:57:02 Got URI "http://www.yourhtmlsource.com/myfirstsite//media//" from char array _new_requests
+2016-02-19 19:57:02 Maximum depth reached, website not processed
+2016-02-19 19:57:02 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite//media//"
+2016-02-19 19:57:02 Got URI "http://www.yourhtmlsource.com/myfirstsite//media//fullindex/" from char array _new_requests
+2016-02-19 19:57:02 Maximum depth reached, website not processed
+2016-02-19 19:57:02 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite//media//fullindex/"
+2016-02-19 19:57:02 No more URIs left.
+2016-02-19 19:57:02 Finished processing website http://www.yourhtmlsource.com/myfirstsite//media/clock.png
+2016-02-19 19:57:02 Got URI "http://www.yourhtmlsource.com/myfirstsite//searchhiplus.js" from char array _new_requests
+2016-02-19 19:57:02 Started processing website	http://www.yourhtmlsource.com/myfirstsite//searchhiplus.js, DEPTH :: 1
+2016-02-19 19:57:02 copying hostname and webpage.... successful
+2016-02-19 19:57:02 obtain IP address for website
+2016-02-19 19:57:02 success DNS query
+2016-02-19 19:57:02 http://www.yourhtmlsource.com/myfirstsite//searchhiplus.js hostname is http://www.yourhtmlsource.com
+2016-02-19 19:57:02 http://www.yourhtmlsource.com resolved to 216.92.175.4
+2016-02-19 19:57:02 Demanded page is /myfirstsite//
+2016-02-19 19:57:02 Initialisation of requestWebsite() inside of processSite()
+2016-02-19 19:57:02
+SENT REQUEST:
+GET /myfirstsite//searchhiplus.js HTTP/1.1
+Host: www.yourhtmlsource.com
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:44.0) Gecko/20100101 Firefox/44.0
+
+
+2016-02-19 19:57:02 Socket() inside requestWebsite() :: SUCCESS
+2016-02-19 19:57:02 inet_aton() inside requestWebsite() :: SUCCESS
+2016-02-19 19:57:02 Initialisation of connect() inside requestWebsite()
+2016-02-19 19:57:03 connect() inside requestWebsite() :: SUCCESS
+2016-02-19 19:57:03 send() inside requestWebsite() :: SUCCESS
+2016-02-19 19:57:03 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:57:03 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:57:03 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:57:03 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:57:03 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:57:03 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:57:03 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 19:57:03 var rcv_length inside requestWebsite() :: OK
+2016-02-19 19:57:08 recv() inside requestWebsite() :: SUCCESS, databytes read: 3343
+2016-02-19 19:57:08 requestWebsite() inside processSite() :: SUCCESS
+2016-02-19 19:57:08 Initialisation of editAndSave() inside of processSite()
+2016-02-19 19:57:08 All links of the website have been saved
+2016-02-19 19:57:08 editAndSave() inside processSite() :: SUCCESS
+2016-02-19 19:57:08 Got URI "http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js" from char array _new_requests
+2016-02-19 19:57:08 Maximum depth reached, website not processed
+2016-02-19 19:57:08 Couldn't proccess resource "http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js"
+2016-02-19 19:57:08 Got URI "http://www.google.com/jsapi" from char array _new_requests
+2016-02-19 19:57:08 Maximum depth reached, website not processed
+2016-02-19 19:57:08 Couldn't proccess resource "http://www.google.com/jsapi"
+2016-02-19 19:57:08 Got URI "http://www.yourhtmlsource.com/myfirstsite///sourcescripts.js" from char array _new_requests
+2016-02-19 19:57:08 Maximum depth reached, website not processed
+2016-02-19 19:57:08 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite///sourcescripts.js"
+2016-02-19 19:57:08 Got URI "http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js" from char array _new_requests
+2016-02-19 19:57:08 Maximum depth reached, website not processed
+2016-02-19 19:57:08 Couldn't proccess resource "http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js"
+2016-02-19 19:57:08 Got URI "http://www.yourhtmlsource.com/myfirstsite///media/mail.gif" from char array _new_requests
+2016-02-19 19:57:08 Maximum depth reached, website not processed
+2016-02-19 19:57:08 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite///media/mail.gif"
+2016-02-19 19:57:08 Got URI "http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js" from char array _new_requests
+2016-02-19 19:57:08 Maximum depth reached, website not processed
+2016-02-19 19:57:08 Couldn't proccess resource "http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js"
+2016-02-19 19:57:08 Got URI "http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js" from char array _new_requests
+2016-02-19 19:57:08 Maximum depth reached, website not processed
+2016-02-19 19:57:08 Couldn't proccess resource "http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js"
+2016-02-19 19:57:08 Got URI "http://www.yourhtmlsource.com/myfirstsite///sitemanagement/custom404error.html" from char array _new_requests
+2016-02-19 19:57:08 Maximum depth reached, website not processed
+2016-02-19 19:57:08 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite///sitemanagement/custom404error.html"
+2016-02-19 19:57:08 Got URI "http://www.yourhtmlsource.com/myfirstsite///" from char array _new_requests
+2016-02-19 19:57:08 Maximum depth reached, website not processed
+2016-02-19 19:57:08 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite///"
+2016-02-19 19:57:08 Got URI "http://www.yourhtmlsource.com/myfirstsite///fullindex/" from char array _new_requests
+2016-02-19 19:57:08 Maximum depth reached, website not processed
+2016-02-19 19:57:08 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite///fullindex/"
+2016-02-19 19:57:08 Got URI "http://www.yourhtmlsource.com/myfirstsite///print.css" from char array _new_requests
+2016-02-19 19:57:08 Maximum depth reached, website not processed
+2016-02-19 19:57:08 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite///print.css"
+2016-02-19 19:57:08 Got URI "http://www.yourhtmlsource.com/myfirstsite///favicon.ico" from char array _new_requests
+2016-02-19 19:57:08 Maximum depth reached, website not processed
+2016-02-19 19:57:08 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite///favicon.ico"
+2016-02-19 19:57:08 Got URI "http://www.yourhtmlsource.com/myfirstsite///htmlsource-search.xml" from char array _new_requests
+2016-02-19 19:57:08 Maximum depth reached, website not processed
+2016-02-19 19:57:08 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite///htmlsource-search.xml"
+2016-02-19 19:57:08 Got URI "http://www.yourhtmlsource.com/" from char array _new_requests
+2016-02-19 19:57:08 Maximum depth reached, website not processed
+2016-02-19 19:57:08 Couldn't proccess resource "http://www.yourhtmlsource.com/"
+2016-02-19 19:57:08 Got URI "http://www.yourhtmlsource.com/myfirstsite///contact/" from char array _new_requests
+2016-02-19 19:57:08 Maximum depth reached, website not processed
+2016-02-19 19:57:08 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite///contact/"
+2016-02-19 19:57:08 Got URI "http://www.yourhtmlsource.com/myfirstsite///" from char array _new_requests
+2016-02-19 19:57:08 Maximum depth reached, website not processed
+2016-02-19 19:57:08 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite///"
+2016-02-19 19:57:08 Got URI "http://www.yourhtmlsource.com/myfirstsite///fullindex/" from char array _new_requests
+2016-02-19 19:57:08 Maximum depth reached, website not processed
+2016-02-19 19:57:08 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite///fullindex/"
+2016-02-19 19:57:08 Got URI "http://www.yourhtmlsource.com/myfirstsite///sitemanagement/custom404error.html" from char array _new_requests
+2016-02-19 19:57:08 Maximum depth reached, website not processed
+2016-02-19 19:57:08 Couldn't proccess resource "http://www.yourhtmlsource.com/myfirstsite///sitemanagement/custom404error.html"
+2016-02-19 19:57:08 Got URI "http://www.yourhtmlsource.com/myfirstsite///" from char array _new_requests
+2016-02-19 19:57:08 Maximum depth reached, website not processed
+2016-02-19

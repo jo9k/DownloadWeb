@@ -1,0 +1,44 @@
+2016-02-19 18:24:23 New session started
+2016-02-19 18:24:24 User input: http://www.yourhtmlsource.com/myfirstsite/
+2016-02-19 18:24:24 System response: WWW website
+2016-02-19 18:24:24 Started processing website	http://www.yourhtmlsource.com/myfirstsite/, DEPTH :: 2
+2016-02-19 18:24:24 copying hostname and webpage.... successful
+2016-02-19 18:24:24 obtain IP address for website
+2016-02-19 18:24:24 success DNS query
+2016-02-19 18:24:24 http://www.yourhtmlsource.com/myfirstsite/ hostname is http://www.yourhtmlsource.com
+2016-02-19 18:24:24 http://www.yourhtmlsource.com resolved to 216.92.175.4
+2016-02-19 18:24:24 Demanded page is /myfirstsite/
+2016-02-19 18:24:24 Initialisation of requestWebsite() inside of processSite()
+2016-02-19 18:24:24
+SENT REQUEST:
+GET /myfirstsite/ HTTP/1.1
+Host: www.yourhtmlsource.com
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:44.0) Gecko/20100101 Firefox/44.0
+
+
+2016-02-19 18:24:24 Socket() inside requestWebsite() :: SUCCESS
+2016-02-19 18:24:24 inet_aton() inside requestWebsite() :: SUCCESS
+2016-02-19 18:24:24 Initialisation of connect() inside requestWebsite()
+2016-02-19 18:24:25 connect() inside requestWebsite() :: SUCCESS
+2016-02-19 18:24:25 send() inside requestWebsite() :: SUCCESS
+2016-02-19 18:24:25 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 18:24:25 var rcv_length inside requestWebsite() :: OK
+2016-02-19 18:24:25 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 18:24:25 var rcv_length inside requestWebsite() :: OK
+2016-02-19 18:24:25 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 18:24:25 var rcv_length inside requestWebsite() :: OK
+2016-02-19 18:24:25 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 18:24:25 var rcv_length inside requestWebsite() :: OK
+2016-02-19 18:24:25 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 18:24:25 var rcv_length inside requestWebsite() :: OK
+2016-02-19 18:24:25 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 18:24:25 var rcv_length inside requestWebsite() :: OK
+2016-02-19 18:24:25 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 18:24:25 var rcv_length inside requestWebsite() :: OK
+2016-02-19 18:24:25 recv() inside requestWebsite() :: SUCCESS
+2016-02-19 18:24:25 var rcv_length inside requestWebsite() :: OK
+2016-02-19 18:24:30 recv() inside requestWebsite() :: SUCCESS, databytes read: 10547
+2016-02-19 18:24:30 requestWebsite() inside processSite() :: SUCCESS
+2016-02-19 18:24:30 Initialisation of editAndSave() inside of processSite()
+2016-02-19 18:24:30 All links of the website have been saved
+2016-02-19 18:24:30 editAndSave() inside processSite() :: SUCCESS
