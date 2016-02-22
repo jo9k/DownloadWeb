@@ -1,0 +1,49 @@
+.TH "webaddr" 3 "Sat Feb 20 2016" "Version 1.0" "Web Download" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+webaddr \- Struct for Webadresses\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "char \fBhostname\fP [\fBHOSTSIZE\fP]"
+.br
+.ti -1c
+.RI "char \fBurl\fP [\fBURLSIZE\fP]"
+.br
+.ti -1c
+.RI "char \fBIP\fP [50]"
+.br
+.ti -1c
+.RI "char \fBpage\fP [\fBURLSIZE\fP\-\fBHOSTSIZE\fP]"
+.br
+.ti -1c
+.RI "char \fBfilename\fP [\fBURLSIZE\fP\-\fBHOSTSIZE\fP]"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Struct for Webadresses\&. 
+
+Saves the text representation of the URL, the hostname and the link within the webpage\&. Also the text representation of the IP can be saved 
+.SH "Field Documentation"
+.PP 
+.SS "char filename[\fBURLSIZE\fP\-\fBHOSTSIZE\fP]"
+Resource name 
+.SS "char hostname[\fBHOSTSIZE\fP]"
+hostname extracted from URL 
+.SS "char IP[50]"
+IP of the webpage 
+.SS "char page[\fBURLSIZE\fP\-\fBHOSTSIZE\fP]"
+Link of the webpage at the host 
+.SS "char url[\fBURLSIZE\fP]"
+URL 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Web Download from the source code\&.

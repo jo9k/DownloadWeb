@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="structsimple__list" kind="struct" language="C++" prot="public">
+    <compoundname>simple_list</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsimple__list_1a136337c2e78395502680cfc27cb1dc0e" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structsimple__list" kindref="compound">simple_list</ref> *</type>
+        <definition>struct simple_list* next</definition>
+        <argsstring></argsstring>
+        <name>next</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>pointer to the next element of the list </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.c" line="64" column="1" bodyfile="main.c" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsimple__list_1aed1cfb225a5fb77461e7972691e68a72" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* string</definition>
+        <argsstring></argsstring>
+        <name>string</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>character string </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.c" line="65" column="1" bodyfile="main.c" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Struct for list. </para>    </briefdescription>
+    <detaileddescription>
+<para>Used to list character strings of new requests </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>simple_list</label>
+        <link refid="structsimple__list"/>
+        <childnode refid="1" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="main.c" line="63" column="1" bodyfile="main.c" bodystart="63" bodyend="66"/>
+    <listofallmembers>
+      <member refid="structsimple__list_1a136337c2e78395502680cfc27cb1dc0e" prot="public" virt="non-virtual"><scope>simple_list</scope><name>next</name></member>
+      <member refid="structsimple__list_1aed1cfb225a5fb77461e7972691e68a72" prot="public" virt="non-virtual"><scope>simple_list</scope><name>string</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

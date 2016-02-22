@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="structwebaddr" kind="struct" language="C++" prot="public">
+    <compoundname>webaddr</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structwebaddr_1abc809c253db3b5cb111bc1730715596b" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char hostname[HOSTSIZE]</definition>
+        <argsstring>[HOSTSIZE]</argsstring>
+        <name>hostname</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>hostname extracted from URL </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.c" line="54" column="1" bodyfile="main.c" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwebaddr_1adbcf7f77feac63817fea7393f4dfbfb7" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char url[URLSIZE]</definition>
+        <argsstring>[URLSIZE]</argsstring>
+        <name>url</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>URL </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.c" line="55" column="1" bodyfile="main.c" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwebaddr_1a22dd553f58fc86f422e856af77d5d7a7" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char IP[50]</definition>
+        <argsstring>[50]</argsstring>
+        <name>IP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>IP of the webpage </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.c" line="56" column="1" bodyfile="main.c" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwebaddr_1a6bd3f94771bd80028ae544431f795d27" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char page[URLSIZE-HOSTSIZE]</definition>
+        <argsstring>[URLSIZE-HOSTSIZE]</argsstring>
+        <name>page</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Link of the webpage at the host </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.c" line="57" column="1" bodyfile="main.c" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwebaddr_1a172af9053ce39ac0fb516a49dad60137" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char filename[URLSIZE-HOSTSIZE]</definition>
+        <argsstring>[URLSIZE-HOSTSIZE]</argsstring>
+        <name>filename</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Resource name </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.c" line="58" column="1" bodyfile="main.c" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Struct for Webadresses. </para>    </briefdescription>
+    <detaileddescription>
+<para>Saves the text representation of the URL, the hostname and the link within the webpage. Also the text representation of the IP can be saved </para>    </detaileddescription>
+    <location file="main.c" line="53" column="1" bodyfile="main.c" bodystart="53" bodyend="59"/>
+    <listofallmembers>
+      <member refid="structwebaddr_1a172af9053ce39ac0fb516a49dad60137" prot="public" virt="non-virtual"><scope>webaddr</scope><name>filename</name></member>
+      <member refid="structwebaddr_1abc809c253db3b5cb111bc1730715596b" prot="public" virt="non-virtual"><scope>webaddr</scope><name>hostname</name></member>
+      <member refid="structwebaddr_1a22dd553f58fc86f422e856af77d5d7a7" prot="public" virt="non-virtual"><scope>webaddr</scope><name>IP</name></member>
+      <member refid="structwebaddr_1a6bd3f94771bd80028ae544431f795d27" prot="public" virt="non-virtual"><scope>webaddr</scope><name>page</name></member>
+      <member refid="structwebaddr_1adbcf7f77feac63817fea7393f4dfbfb7" prot="public" virt="non-virtual"><scope>webaddr</scope><name>url</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

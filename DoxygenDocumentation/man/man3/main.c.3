@@ -1,0 +1,639 @@
+.TH "main.c" 3 "Sat Feb 20 2016" "Version 1.0" "Web Download" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+main.c \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <sys/select\&.h>\fP
+.br
+\fC#include <time\&.h>\fP
+.br
+\fC#include <unistd\&.h>\fP
+.br
+\fC#include <sys/types\&.h>\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <sys/socket\&.h>\fP
+.br
+\fC#include <netdb\&.h>\fP
+.br
+\fC#include <arpa/inet\&.h>\fP
+.br
+\fC#include <sys/stat\&.h>\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBwebaddr\fP"
+.br
+.RI "\fIStruct for Webadresses\&. \fP"
+.ti -1c
+.RI "struct \fBsimple_list\fP"
+.br
+.RI "\fIStruct for list\&. \fP"
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBPORT\fP   80"
+.br
+.ti -1c
+.RI "#define \fBSOCKINQUEUE\fP   5"
+.br
+.ti -1c
+.RI "#define \fBURLSIZE\fP   256"
+.br
+.ti -1c
+.RI "#define \fBHOSTSIZE\fP   50"
+.br
+.ti -1c
+.RI "#define \fBBUFLEN\fP   63000"
+.br
+.ti -1c
+.RI "#define \fBSTDIN\fP   0"
+.br
+.ti -1c
+.RI "#define \fBTIMESIZE\fP   20"
+.br
+.ti -1c
+.RI "#define \fBDEPTH\fP   2"
+.br
+.ti -1c
+.RI "#define \fBMAX_REQ\fP   50"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBwebaddr\fP \fBWebAddr\fP"
+.br
+.RI "\fIStruct for Webadresses\&. \fP"
+.ti -1c
+.RI "typedef struct \fBsimple_list\fP \fBlist\fP"
+.br
+.RI "\fIStruct for list\&. \fP"
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBdie\fP (char *s, int \fBi\fP)"
+.br
+.RI "\fICustom error function\&. \fP"
+.ti -1c
+.RI "int \fBprocessSite\fP (char *name, FILE *log, int depth, char *current_folder)"
+.br
+.RI "\fIDownload contents of webpage recursively and start the logging process\&. \fP"
+.ti -1c
+.RI "int \fBprocessQuery\fP (char *query, FILE *log)"
+.br
+.RI "\fIUses google\&.de to search for the given string\&. \fP"
+.ti -1c
+.RI "char * \fBgetTimeBuffer\fP (char *timebuff)"
+.br
+.RI "\fIReads the time base, creates a timestamp and writes the result into char string timebuff\&. \fP"
+.ti -1c
+.RI "int \fBpreprocess_website\fP (\fBWebAddr\fP *website, FILE *log)"
+.br
+.RI "\fIConverts the hostname to a IP address, prepares webpage address for processing in the program\&. \fP"
+.ti -1c
+.RI "int \fBrequestWebsite\fP (\fBWebAddr\fP *website, FILE *log, char *buffer,unsigned int *\fBbuflen\fP)"
+.br
+.RI "\fIDownload the webpage\&. \fP"
+.ti -1c
+.RI "int \fBeditAndSave\fP (\fBWebAddr\fP *website, FILE *log, char *content, \fBlist\fP *\fBnew_requests\fP)"
+.br
+.RI "\fIEdits contents of webpage and tries to retrieve links to other sites/resources to be downloaded\&. \fP"
+.ti -1c
+.RI "int \fBmain\fP ()"
+.br
+.RI "\fIMain function\&. \fP"
+.ti -1c
+.RI "\fBfprintf\fP (logfile,'%s %s\\n', getTimeBuffer(timebuff),'Initialisation of \fBrequestWebsite\fP() inside of \fBprocessSite\fP()')"
+.br
+.ti -1c
+.RI "\fBstrcpy\fP (\fBrequest\fP,'GET ')"
+.br
+.RI "\fIHTTP REQUEST\&. \fP"
+.ti -1c
+.RI "\fBstrcat\fP (\fBrequest\fP, website\->page)"
+.br
+.ti -1c
+.RI "\fBstrcat\fP (\fBrequest\fP,' HTTP/1\&.1\\r\\nHost: ')"
+.br
+.ti -1c
+.RI "\fBstrcat\fP (\fBrequest\fP, website\->hostname+7)"
+.br
+.ti -1c
+.RI "\fBstrcat\fP (\fBrequest\fP,'\\r\\nUser\-Agent: Mozilla/5\&.0 (X11; Ubuntu; Linux i686; rv:44\&.0) Gecko/20100101 Firefox/44\&.0\\r\\n')"
+.br
+.ti -1c
+.RI "\fBstrcat\fP (\fBrequest\fP,'\\r\\n')"
+.br
+.ti -1c
+.RI "\fBfprintf\fP (logfile,'%s\\n%s\\n%s\\n', getTimeBuffer(timebuff),'SENT REQUEST:', request)"
+.br
+.ti -1c
+.RI "\fBmemset\fP ((char *)&\fBsi_server\fP, 0, sizeof(\fBsi_server\fP))"
+.br
+.ti -1c
+.RI "\fBif\fP (if(connect(\fBsock_id\fP==\-1)"
+.br
+.ti -1c
+.RI "\fBif\fP (send(\fBsock_id\fP, \fBrequest\fP, strlen(\fBrequest\fP), 0)< 0)"
+.br
+.ti -1c
+.RI "\fBwhile\fP (1)"
+.br
+.ti -1c
+.RI "\fBif\fP (beginning_of_data!=NULL)"
+.br
+.ti -1c
+.RI "\fBclose\fP (\fBsock_id\fP)"
+.br
+.ti -1c
+.RI "\fBfprintf\fP (logfile,'%s %s\\n', getTimeBuffer(timebuff),'Initialisation of \fBeditAndSave\fP() inside of \fBprocessSite\fP()')"
+.br
+.ti -1c
+.RI "\fBfor\fP (\fBi\fP=0;\fBi\fP< \fBMAX_REQ\fP;)"
+.br
+.ti -1c
+.RI "\fBfprintf\fP (logfile,'%s %s\\n', getTimeBuffer(timebuff),'All links of the website have been saved')"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "struct sockaddr_in \fBsi_server\fP"
+.br
+.ti -1c
+.RI "socklen_t \fBsock_length\fP = sizeof(\fBsi_server\fP)"
+.br
+.ti -1c
+.RI "char \fBdata\fP [\fBBUFLEN\fP]"
+.br
+.ti -1c
+.RI "int \fBsock_id\fP = socket(AF_INET, SOCK_STREAM, 0)"
+.br
+.ti -1c
+.RI "int \fBrcv_length\fP =\-1"
+.br
+.ti -1c
+.RI "* \fBbuflen\fP = 0"
+.br
+.ti -1c
+.RI "char * \fBrequest\fP = (char*) malloc (sizeof(website\->hostname)*strlen(website\->hostname)+sizeof(website\->page)*strlen(website\->page)+sizeof(char)*75)"
+.br
+.ti -1c
+.RI "\fBsi_server\fP \fBsin_family\fP = AF_INET"
+.br
+.ti -1c
+.RI "\fBsi_server\fP \fBsin_port\fP = htons(\fBPORT\fP)"
+.br
+.ti -1c
+.RI "\fBelse\fP"
+.br
+.ti -1c
+.RI "char * \fBbeginning_of_data\fP =strstr(buffer,'\\r\\n\\r\\n')"
+.br
+.ti -1c
+.RI "int \fBoffset\fP = \fBbeginning_of_data\fP\-buffer+4"
+.br
+.ti -1c
+.RI "return \fBEXIT_SUCCESS\fP"
+.br
+.ti -1c
+.RI "\fBnew_requests\fP \fBstring\fP = (char*) malloc(\fBURLSIZE\fP)"
+.br
+.ti -1c
+.RI "\fBlist\fP * \fBinitial_pointer\fP = \fBnew_requests\fP"
+.br
+.RI "\fIbuffer beginning of list \fP"
+.ti -1c
+.RI "char * \fBpch\fP =content"
+.br
+.RI "\fIreset position of search pointer \fP"
+.ti -1c
+.RI "char * \fBpositionbuf\fP"
+.br
+.ti -1c
+.RI "char * \fBtmp\fP"
+.br
+.ti -1c
+.RI "int \fBi\fP"
+.br
+.ti -1c
+.RI "\fBnew_requests\fP = \fBinitial_pointer\fP"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define BUFLEN   63000"
+Max length of buffer -> experimentally 128K, seems legitimate, after some checking ; For google we gonna need ~twice as much 131072 
+.SS "#define DEPTH   2"
+Maximum recurency depth 
+.SS "#define HOSTSIZE   50"
+For finding method of query 
+.SS "#define MAX_REQ   50"
+Maximum number of requests from one page 
+.SS "#define PORT   80"
+The port on which to listen for incoming data 
+.SS "#define SOCKINQUEUE   5"
+Max number of socks in queue 
+.SS "#define STDIN   0"
+Standard input 
+.SS "#define TIMESIZE   20"
+Length of timestamp 
+.SS "#define URLSIZE   256"
+Max length of URL 
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct \fBsimple_list\fP  \fBlist\fP"
+
+.PP
+Struct for list\&. Used to list character strings of new requests 
+.SS "typedef struct \fBwebaddr\fP  \fBWebAddr\fP"
+
+.PP
+Struct for Webadresses\&. Saves the text representation of the URL, the hostname and the link within the webpage\&. Also the text representation of the IP can be saved 
+.SH "Function Documentation"
+.PP 
+.SS "close (\fBsock_id\fP)"
+
+.SS "void die (char * s, int i)"
+
+.PP
+Custom error function\&. Outputs the error string s and exits program with exit number i 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIs\fP char string with error Message 
+.br
+\fIi\fP error number 
+.RE
+.PP
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIs\fP error message 
+.br
+\fIi\fP error number 
+.RE
+.PP
+
+.SS "int editAndSave (\fBWebAddr\fP * website, FILE * log, char * content, \fBlist\fP * new_requests)"
+
+.PP
+Edits contents of webpage and tries to retrieve links to other sites/resources to be downloaded\&. List with new requests is filled with request found on the site\&. max number of requests is MAX_REQ 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIwebsite\fP pointer to WebAddr struct 
+.br
+\fIlog\fP pointer to logfile 
+.br
+\fIcontent\fP pointer to data to edit 
+.br
+\fI*new_requests\fP pointer to list of new requests for further iterations 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+0 on success 1 on failure 
+.RE
+.PP
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIwebsite\fP pointer to WebAddr struct 
+.br
+\fIlog\fP pointer to logfile 
+.br
+\fIcontent\fP pointer to formatted data 
+.br
+\fInew_requests\fP pointer to list of new http queries 
+.RE
+.PP
+
+.SS "for ()"
+check if we have an absolute link, if so the path in the !saved! file has to be changed!
+.PP
+relative link => add website address but the path in the !saved! file can stay the same (Browser will look in the same folder for this files)
+.PP
+check if we have an absolute link, if so the path in the !saved! file has to be changed!
+.PP
+relative link => add website address but the path in the !saved! file can stay the same (Browser will look in the same folder for this files) 
+.SS "fprintf (logfile, '%s %s\\n', \fBgetTimeBuffer\fP(timebuff), 'Initialisation of \fBrequestWebsite\fP() inside of \fBprocessSite\fP()')"
+
+.SS "fprintf (logfile, '%s\\n%s\\n%s\\n', \fBgetTimeBuffer\fP(timebuff), 'SENT REQUEST:', \fBrequest\fP)"
+
+.SS "fprintf (logfile, '%s %s\\n', \fBgetTimeBuffer\fP(timebuff), 'Initialisation of \fBeditAndSave\fP() inside of \fBprocessSite\fP()')"
+
+.SS "fprintf (logfile, '%s %s\\n', \fBgetTimeBuffer\fP(timebuff), 'All links of the website have been saved')"
+
+.SS "char * getTimeBuffer (char * timebuff)"
+
+.PP
+Reads the time base, creates a timestamp and writes the result into char string timebuff\&. Timestamp in Format YMD HMS 
+.PP
+\fBParameters:\fP
+.RS 4
+\fItimebuf\fP pointer to string to write timestamp to 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+pointer to string which contains the timestamp 
+.RE
+.PP
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fItimebuff\fP pointer to char string with timestamp 
+.RE
+.PP
+
+.SS "if (if (connect( sock_id = \fC= \-1\fP)"
+
+.SS "if ()"
+
+.SS "if (beginning_of_data! = \fCNULL\fP)"
+
+.SS "int main ()"
+
+.PP
+Main function\&. Calls the functions necessary for the function of the program, also all the steps for logging are implemented here\&. Select is used to efficiently wait for user input < master fd_set for restoring the flag status
+.PP
+< temp fd_set for checking the flag status by select()
+.PP
+preparing pointers and variables for logging
+.PP
+< File pointer
+.PP
+generate a filename
+.PP
+concatenate path&filename
+.PP
+restore temp_set
+.PP
+register stdin for select
+.PP
+Any number of file descriptors is ready to be read
+.PP
+Read data from stdin using fgets\&.
+.PP
+Remove trailing newline character from the input buffer if needed\&.
+.PP
+Starting application shutdown procedure
+.PP
+Processing URL query
+.PP
+Processing google query
+.PP
+Writes help manual in console 
+.SS "memset ((char *)& si_server, 0, sizeof(\fBsi_server\fP))"
+
+.SS "int preprocess_website (\fBWebAddr\fP * website, FILE * log)"
+
+.PP
+Converts the hostname to a IP address, prepares webpage address for processing in the program\&. Extracts the hostname and the relative address on the server from the given URL, query the DNS to obtain the IP addresses linked to that webpage and save the result in a WebAddr struct, 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIwebsite\fP WebAddr pointer which provides website address, the IP address will be added 
+.br
+\fIlog\fP pointer to logfile 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+0 on success and 1 on error 
+.RE
+.PP
+check argument *website
+.PP
+check buffer overflow
+.PP
+start processing, search for the first / after the web address, this position tells where the hostname ends and where the relative page address starts
+.PP
+strings not zero terminated!
+.PP
+get the IP address for the website
+.PP
+loop through all the results and connect to the first we can 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIwebsite\fP pointer to WebAddr struct 
+.br
+\fIlog\fP pointer to logfile 
+.RE
+.PP
+
+.SS "int processQuery (char * query, FILE * log)"
+
+.PP
+Uses google\&.de to search for the given string\&. The given string is the argument of a google search on the german google servers\&. The resulting webpage is downloaded\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIquery\fP input string for the google Query 
+.br
+\fIlog\fP pointer to logfile 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+0 on success 
+.RE
+.PP
+logging system if no global log file exists\&.
+.PP
+if directory doesn't exist, create directory
+.PP
+processing query 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIquery\fP string containing the query in html format 
+.br
+\fIlog\fP pointer to logfile 
+.RE
+.PP
+
+.SS "int processSite (char * name, FILE * log, int depth, char * current_folder)"
+
+.PP
+Download contents of webpage recursively and start the logging process\&. A textfile under the name name is created for logging, a WebAddr struct is initialized and the webpage contents are downloaded recursively 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlog\fP pointer to logfile 
+.br
+\fIdepth\fP depth of the recursion 
+.br
+\fIcurrent_folder\fP is pointer to char string containing directory for file save 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+0 on success 1 on failure 
+.RE
+.PP
+processing website address
+.PP
+download the website
+.PP
+extract all the links from the website and change to relative addressing
+.PP
+create folders for all the websites and write content (ie the downloaded file from website) to folder
+.PP
+if it's html site, then create it another folder, else leave dir unchanged
+.PP
+if main site, ie\&. no file name for saving
+.PP
+filename cannot consist of '/' so http:// ommited
+.PP
+try to open file for saving data
+.PP
+save the file
+.PP
+recursively call \fBprocessSite()\fP for all the found links src = full addresses or relative ones 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIname\fP name of the webpage 
+.br
+\fIlog\fP pointer to logfile 
+.br
+\fIdepth\fP recursion depth 
+.br
+\fIcurrent_folder\fP folder to write-in 
+.RE
+.PP
+
+.SS "int requestWebsite (\fBWebAddr\fP * website, FILE * log, char * buffer, unsigned int * buflen)"
+
+.PP
+Download the webpage\&. Assemble the http command for downloading the webpage given in WebAddr struct\&. Send the request to the server and download the webpage 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIwebsite\fP website to be downloaded 
+.br
+\fIlog\fP pointer to logfile 
+.br
+\fIbuffer\fP char string for the website DATA 
+.br
+\fIbuflen\fP pointer to unsigned int returns size of received data 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+0 on success 1 on failure 
+.RE
+.PP
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIwebsite\fP pointer to WebAddr struct 
+.br
+\fIlog\fP pointer to logfile 
+.br
+\fIbuffer\fP pointer to received content 
+.br
+\fIbuflen\fP pointer to received data size 
+.RE
+.PP
+
+.SS "strcat (\fBrequest\fP, website\-> page)"
+
+.SS "strcat (\fBrequest\fP, ' HTTP/1\&.1\\r\\nHost: ')"
+
+.SS "strcat (\fBrequest\fP, website\->hostname+ 7)"
+
+.SS "strcat (\fBrequest\fP, '\\r\\nUser\-Agent: Mozilla/5\&.0 (X11; Ubuntu; Linux i686; rv:44\&.0) Gecko/20100101 Firefox/44\&.0\\r\\n')"
+
+.SS "strcat (\fBrequest\fP, '\\r\\n')"
+
+.SS "strcpy (\fBrequest\fP, 'GET ')"
+
+.PP
+HTTP REQUEST\&. 
+.SS "while (1)"
+
+.SH "Variable Documentation"
+.PP 
+.SS "char* beginning_of_data =strstr(buffer,'\\r\\n\\r\\n')"
+
+.SS "* buflen = 0"
+
+.SS "char data[\fBBUFLEN\fP]"
+
+.SS "else"
+\fBInitial value:\fP
+.PP
+.nf
+{
+        fprintf(logfile, "%s %s\n", getTimeBuffer(timebuff), "send() inside requestWebsite() :: SUCCESS")
+.fi
+.SS "return EXIT_SUCCESS"
+
+.SS "int i"
+
+.SS "\fBlist\fP* initial_pointer = \fBnew_requests\fP"
+
+.PP
+buffer beginning of list 
+.SS "new_requests = \fBinitial_pointer\fP"
+
+.SS "int offset = \fBbeginning_of_data\fP\-buffer+4"
+
+.SS "pch =content"
+
+.PP
+reset position of search pointer 
+.SS "char * positionbuf"
+
+.SS "int rcv_length =\-1"
+
+.SS "request = (char*) malloc (sizeof(website\->hostname)*strlen(website\->hostname)+sizeof(website\->page)*strlen(website\->page)+sizeof(char)*75)"
+
+.SS "struct sockaddr_in si_server"
+\fBInitial value:\fP
+.PP
+.nf
+{
+    char timebuff[TIMESIZE]
+.fi
+.SS "\fBsi_server\fP sin_family = AF_INET"
+
+.SS "\fBsi_server\fP sin_port = htons(\fBPORT\fP)"
+
+.SS "sock_id = socket(AF_INET, SOCK_STREAM, 0)"
+
+.SS "socklen_t sock_length = sizeof(\fBsi_server\fP)"
+
+.SS "\fBnew_requests\fP string = (char*) malloc(\fBURLSIZE\fP)"
+
+.SS "char* tmp"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Web Download from the source code\&.
